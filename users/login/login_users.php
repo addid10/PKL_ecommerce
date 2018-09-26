@@ -1,5 +1,4 @@
 <?php
-session_start();
 require('../../db/db.php');
 
 if(isset($_POST['__username']) && isset($_POST['__password']))
