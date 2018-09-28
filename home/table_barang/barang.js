@@ -103,12 +103,12 @@ $(document).ready(function(){
 	
      // View Data
      $(document).on('click', '.view', function(){
-        var id = $(this).attr("id");
+        var id_barang = $(this).attr("id");
         $.ajax({
             url:"table_barang/detailData.php",
             method:"POST",
             data:{
-                id:id
+                id_barang:id_barang
             },
             success:function(data){
                 $('#detailModal').modal('show');

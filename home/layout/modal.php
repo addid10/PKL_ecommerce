@@ -15,7 +15,7 @@
                 <div class="form-group row">
                     <label class="col-sm-3 col-form-label">Kategori</label>
                     <div class="col-sm-9">
-                        <select name="kategori" onchange="showDiv(this)" id="kategori" class="form-control">
+                        <select name="kategori" id="kategori" class="form-control">
                             <option>Pilih Kategori</option>
                             <option value="1">Brankas</option>
                             <option value="2">ATK</option>
@@ -76,7 +76,7 @@
         <div class="modal-footer">
           <input type="hidden" name="idBarang" id="idBarang">
           <input type="hidden" name="operation" id="operation">
-          <button type="button" id="actionButton" class="btn hor-grd btn-grd-success" value="Tambah"></button>
+          <input type="submit" name="actionButton" id="actionButton" class="btn hor-grd btn-grd-success" value="Tambah">
         </div>
         
       </div>

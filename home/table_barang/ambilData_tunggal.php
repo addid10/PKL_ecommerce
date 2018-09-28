@@ -1,6 +1,6 @@
 <?php
 include('db.php');
-include('function.php');
+include('functionData.php');
 if(isset($_POST["id_barang"]))
 {
     $id_barang = $_POSTP['id_barang'];

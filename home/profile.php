@@ -47,7 +47,7 @@
                                                         <h6 class="f-w-600 m-t-25 m-b-10"><?php require_once('layout/session.php'); echo $profile->nama_users;?></h6>
                                                         <p class="text-muted"><?php if($profile->id_role==1){echo "Admin";} else{echo "Member";}?> | <?php echo $profile->telepon; ?></p>
                                                         <hr/>
-                                                        <p class="text-muted m-t-15">Bergabung: <?php echo $profile->tgl_dibuat;?></p>
+                                                        <p class="text-muted m-t-15"><?php echo $profile->tgl_dibuat;?></p>
                                                         <ul class="list-unstyled activity-leval">
                                                             <li class="active"></li>
                                                             <li class="active"></li>
@@ -71,6 +71,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <p class="m-t-15">Bergabung: <?php echo $profile->alamat;?></p>
                                                         <hr/>
                                                         <div class="row justify-content-center user-social-link">
                                                             <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
