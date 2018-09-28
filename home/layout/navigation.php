@@ -89,8 +89,8 @@
                            
                            <li class="user-profile header-notification">
                                <a href="#!">
-                                   <img src="../assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                   <span>John Doe</span>
+                                   <img src="../assets/images/<?php require_once('session.php'); echo $profile->foto; ?>" class="img-radius" alt="User-Profile-Image">
+                                   <span><?php require_once('session.php'); echo $profile->nama_users; ?></span>
                                    <i class="ti-angle-down"></i>
                                </a>
                                <ul class="show-notification profile-notification">
@@ -114,7 +114,7 @@
                                        <a id="log">
                                        <i class="ti-layout-sidebar-left"></i> Logout
                                        </a>
-                                       <form id="out" method="POST" action="users/login/logout.php"> 
+                                       <form id="out" method="POST" action="../users/login/logout.php"> 
                                        <input type="hidden" name="__logout">
                                        </form>
                                    </li>
