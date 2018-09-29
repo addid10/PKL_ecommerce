@@ -129,3 +129,7 @@ var nav = $('.fixed-button');
          nav.removeClass('active');
      }
  });
+
+$('#log').click(function() {
+    $('#out').submit();
+});

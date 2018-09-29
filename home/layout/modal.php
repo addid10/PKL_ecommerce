@@ -10,31 +10,35 @@
         </div>
         
         <!-- Modal body -->
-        <div class="modal-body">
-            <form method="post" id="addForm" enctype="multipart/form-data">
-                <div class="form-group row">
+        <form method="post" id="addForm" enctype="multipart/form-data">
+            <div class="modal-body">
+                <div class="form-group row" id="kat">
                     <label class="col-sm-3 col-form-label">Kategori</label>
                     <div class="col-sm-9">
                         <select name="kategori" id="kategori" class="form-control">
                             <option>Pilih Kategori</option>
-                            <option value="1">Brankas</option>
-                            <option value="2">ATK</option>
+                            <?php require_once('table_barang/functionData.php'); echo load_kategori();?>
+                            <!--
+                            <option value="1">ATK</option>
+                            <option value="2">Brankas</option>
+                            -->
                         </select>
                     </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row" id="sub">
                     <label class="col-sm-3 col-form-label">Sub Kategori</label>
                     <div class="col-sm-9">
-                        <select name="select" class="form-control">
+                        <select name="sub_kategori" id="sub_kategori" class="form-control">
                             <option>Pilih Sub Kategori</option>
-                            <option value="1">Tes</option>
-                            <option value="2">Type 2</option>
-                            <option value="3">Type 3</option>
-                            <option value="4">Type 4</option>
-                            <option value="5">Type 5</option>
-                            <option value="6">Type 6</option>
-                            <option value="7">Type 7</option>
-                            <option value="8">Type 8</option>
+                            <!--
+                            <option value="1">Kertas</option>
+                            <option value="2">Pulpen</option>
+                            <option value="3">Pensil</option>
+                            <option value="4">Spidol</option>
+                            <option value="5">Brankas Kecil</option>
+                            <option value="6">Brankas Sedang</option>
+                            <option value="7">Brankas Besar</option>
+                            -->
                         </select>
                     </div>
                 </div>
@@ -69,19 +73,19 @@
                     <textarea id="keterangan" name="keterangan" rows="4" cols="4" class="form-control"></textarea>
                     </div>
                 </div>
-            </form>
-        </div>
+            </div>
         
         <!-- Modal footer -->
         <div class="modal-footer">
-          <input type="hidden" name="idBarang" id="idBarang">
+          <input type="hidden" name="id_barang" id="id_barang">
           <input type="hidden" name="operation" id="operation">
           <input type="submit" name="actionButton" id="actionButton" class="btn hor-grd btn-grd-success" value="">
         </div>
+        </form>
         
-      </div>
+        </div>
     </div>
-  </div>
+</div>
 
   <!--Modal View-->
   <div class="modal" id="detailModal">
@@ -110,3 +114,5 @@
     </div>
   </div>
   <!--End Modal View-->
+
+ 

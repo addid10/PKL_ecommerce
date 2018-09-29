@@ -1,10 +1,10 @@
 <?php
 include('db.php');
-include('function.php');
+include('functionData.php');
 
 if(isset($_POST["operation"]))
 {
-    $sub_kategori = $_POST['id_sub_kategori'];
+    $sub_kategori = $_POST['sub_kategori'];
     $nama_barang  = $_POST['nama_barang'];
     $harga        = $_POST['harga'];
     $keterangan   = $_POST['keterangan'];
@@ -53,7 +53,6 @@ if(isset($_POST["operation"]))
 		}
 		$statement = $connection->prepare(
 			"UPDATE barang SET 
-			id_sub_kategori  = :id_sub_kategori, 
 			nama_barang	     = :nama_barang, 
 			harga 	         = :harga,
 			keterangan       = :keterangan,
@@ -63,7 +62,6 @@ if(isset($_POST["operation"]))
         );
         
         $statement->bindParam("_idBarang", $id_barang);
-        $statement->bindParam("id_sub_kategori", $sub_kategori);
         $statement->bindParam("nama_barang", $nama_barang);
         $statement->bindParam("harga", $harga);
         $statement->bindParam("keterangan", $keterangan);

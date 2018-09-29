@@ -34,4 +34,20 @@ function get_total_all_records()
 	return $statement->rowCount();
 }
 
+function load_kategori() 
+{
+	require('db.php');
+	$hasilKategori = '';
+	
+	$statement = $connection->prepare("SELECT * FROM kategori ORDER BY kategori");
+	$statement->execute();
+	$result    = $statement->fetchAll(PDO::FETCH_OBJ);
+
+	foreach ($result as $data){
+		$hasilKategori .= '<option value="'.$data->id_kategori.'">'.$data->kategori.'</option>';
+	}
+	return $hasilKategori;
+
+}
+
 ?>

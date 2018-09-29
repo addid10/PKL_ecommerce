@@ -19,22 +19,14 @@ if(isset($_POST["id_barang"]))
         $detailHasil .= '
         <div class="table-responsive">
         <table class="table table-hover">';
-    
-    $tampilFoto = $connection->prepare(
-        "SELECT foto FROM barang 
-         WHERE id_barang=:_idBarang");
-
-        $tampilFoto->bindParam('_idBarang', $id_barang);
-        $tampilFoto->execute();
-        $countFoto = $tampilFoto->fetchColumn();
         
     foreach ($detailData as $data)
     {
-        if($countFoto==1){
-            $foto = $data->foto;
+        if($data->foto==0){
+            $foto = "noimage.png";
         }
         else{
-            $foto = "noimage.png";
+            $foto = $data->foto;
         }
 
 
@@ -71,7 +63,7 @@ if(isset($_POST["id_barang"]))
             </tr>
         </tbody>
         ';
-}
+    }
        $detailHasil   .= '
        </table></div>';
 

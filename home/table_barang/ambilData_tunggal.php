@@ -19,7 +19,7 @@ if(isset($_POST["id_barang"]))
 		$hasilData["harga"]    			= $row["harga"];
 		$hasilData["keterangan"]        = $row["keterangan"];
 		$hasilData["merk_barang"]       = $row["merk_barang"];
-		
+
 		if($row["foto"] != '')
 		{
 			$hasilData["foto"] = 

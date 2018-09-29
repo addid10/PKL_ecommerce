@@ -34,37 +34,35 @@ $(document).ready(function(){
 	},3000);
 
     //Add
-	$(document).on('submit', '#service_form', function(event){
+	$(document).on('submit', '#addForm', function(event){
 		event.preventDefault();
-		var nama      = $('#Nama_Service').val();
-		var alamat    = $('#Alamat_Service').val();
-		var waktu     = $('#waktuBuka').val();
-		var lat       = $('#latitud').val();
-		var long      = $('#longitud').val();
-		var daftar	  = $('#Daftar_Service').val();
-		var username  = $('#username').val();
-		var extension = $('#Foto_Service').val().split('.').pop().toLowerCase();
+		var nama     = $('#nama_barang').val();
+		var harga    = $('#harga').val();
+		var merk     = $('#merk_barang').val();
+		var ket      = $('#keterangan').val();
+		var sub      = $('#sub_kategori').val();
+		var extension= $('#foto').val().split('.').pop().toLowerCase();
 		if(extension != '')
 		{
 			if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)
 			{
 				alert("Invalid Image File");
-				$('#Foto_Service').val('');
+				$('#foto').val('');
 				return false;
 			}
 		}	
-		if(nama != '')
+		if(nama !='')
 		{
 			$.ajax({
-				url:"insert.php",
+				url:"table_barang/operationData.php",
 				method:'POST',
 				data:new FormData(this),
 				contentType:false,
 				processData:false,
 				success:function(data)
 				{
-					$('#service_form')[0].reset();
-					$('#serviceModal').modal('hide');
+					$('#addForm')[0].reset();
+					$('#addModal').modal('hide');
 					dataTable.ajax.reload();
 				}
 			});
@@ -74,9 +72,36 @@ $(document).ready(function(){
 			alert("Both Fields are Required");
 		}
 	});
-    
+
+	$(document).ready(function(){
+		$(document).on('click', '#addButton', function(){
+			$('#kategori').show();
+			$('#sub_kategori').show();
+			$('#kat').show();
+			$('#sub').show();
+		})
+	});
+
+	$(document).ready(function(){
+		$(document).on('click', '#kategori', function(){
+			var id_kategori = $(this).val();
+			$.ajax({
+				url:"table_barang/kategoriData.php",
+				method:"POST",
+				data: {
+					id_kategori:id_kategori
+				},
+				success:function(data)
+				{
+					$('#sub_kategori').html(data);
+				}
+			})
+		})
+	});
+
     //Update Edit
 	$(document).on('click', '.update', function(){
+		
 		var id_barang = $(this).attr("id");
 		$.ajax({
 			url:"table_barang/ambilData_tunggal.php",
@@ -93,6 +118,10 @@ $(document).ready(function(){
 				$('#harga').val(data.harga);
 				$('#keterangan').val(data.keterangan);
 				$('#merk_barang').val(data.merk_barang);
+				$('#kategori').hide();
+				$('#sub_kategori').hide();
+				$('#kat').hide();
+				$('#sub').hide();
 				
 				$('#uploadImage').html(data.foto);
 				$('#actionButton').val("Update");
