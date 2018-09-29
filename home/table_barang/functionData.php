@@ -16,8 +16,8 @@ function get_image_name($id_barang)
 {
 	include('db.php');
 	$statement = $connection->prepare("SELECT foto FROM barang WHERE id_barang=:_idBarang");
-    $statement->execute();
     $statement->bindParam('_idBarang',$id_barang);
+    $statement->execute();
 	$result = $statement->fetchAll();
 	foreach($result as $row)
 	{

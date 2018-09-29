@@ -79,7 +79,7 @@ $(document).ready(function(){
 	$(document).on('click', '.update', function(){
 		var id_barang = $(this).attr("id");
 		$.ajax({
-			url:"ambilData_tunggal.php",
+			url:"table_barang/ambilData_tunggal.php",
 			method:"POST",
 			data:{id_barang:id_barang},
 			dataType:"json",
@@ -88,14 +88,14 @@ $(document).ready(function(){
 				$('#addModal').modal('show');
 				$('.modal-title').text("Update Data");
 				
-				$('#id_barang').val(idService);
-				$('#nama_barang').val(data.Nama_Service);
-				$('#harga').val(data.Alamat_Service);
-				$('#keterangan').val(data.latitud);
-				$('#merk_barang').val(data.longitud);
+				$('#id_barang').val(id_barang);
+				$('#nama_barang').val(data.nama_barang);
+				$('#harga').val(data.harga);
+				$('#keterangan').val(data.keterangan);
+				$('#merk_barang').val(data.merk_barang);
 				
-				$('#service_uploaded_image').html(data.Foto_Service);
-				$('#action').val("Edit");
+				$('#uploadImage').html(data.foto);
+				$('#actionButton').val("Update");
 				$('#operation').val("Edit");
 			}
 		})
@@ -122,26 +122,26 @@ $(document).ready(function(){
 	$(document).on('click','.delete',function(){
 
 		swal({
-			title: "Hehe gimana nih?",
-			text: "Once deleted, you will not be able to recover this Data!",
+			title: "Apa anda yakin ingin?",
+			text: "Sekali hapus, data tidak akan bisa dikembalikan!",
 			icon: "warning",
 			buttons: true,
 			dangerMode: true,
 		  })
 		  .then((willDelete) => {
 			if (willDelete) {
-				var idService = $(this).attr("id");
+				var id_barang = $(this).attr("id");
 		
 			$.ajax({
-				url:"delete.php",
+				url:"table_barang/deleteData.php",
 				method:"POST",
-				data:{idService:idService},
+				data:{id_barang:id_barang},
 				success:function(data)
 				{
 					dataTable.ajax.reload();
 				}
 			});
-			  swal("Your Data Deleted", {
+			  swal("Data Berhasil di hapus!", {
 				icon: "success",
 			  });
 			} 

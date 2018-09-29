@@ -36,7 +36,7 @@ foreach($result as $row)
 	$sub_array[] = $row["id_barang"];
 	$sub_array[] = $row["nama_barang"];
 	$sub_array[] = $row["harga"];
-	$sub_array[] = '<button type="button" name="view" 	id="'.$row["id_barang"].'" class="btn btn-primary view">View</button>';	
+	$sub_array[] = '<button type="button" name="view" 	id="'.$row["id_barang"].'" class="btn btn-info view">View</button>';	
 	$sub_array[] = '<button type="button" name="update" id="'.$row["id_barang"].'" class="btn btn-warning update">Update</button>';
 	$sub_array[] = '<button type="button" name="delete" id="'.$row["id_barang"].'" class="btn btn-danger delete">Delete</button>';
 	$data[] = $sub_array;

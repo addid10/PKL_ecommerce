@@ -41,32 +41,32 @@
                 <div class="form-group row">
                     <label class="col-sm-3 col-form-label">Nama Barang</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" maxlength="50">
+                        <input id="nama_barang" name="nama_barang" type="text" class="form-control" maxlength="50">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-3 col-form-label">Harga</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control">
+                        <input id="harga" name="harga" type="text" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-3 col-form-label">Merk Barang</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control">
+                        <input id="merk_barang" name="merk_barang" type="text" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-3 col-form-label">Foto</label>
                     <div class="col-sm-9">
-                        <input type="file" class="form-control">
+                        <input id="foto" name="foto" type="file" class="form-control">
                         <span id="uploadImage"></span>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-3 col-form-label">Keterangan</label>
                     <div class="col-sm-9">
-                    <textarea rows="4" cols="4" class="form-control"></textarea>
+                    <textarea id="keterangan" name="keterangan" rows="4" cols="4" class="form-control"></textarea>
                     </div>
                 </div>
             </form>
@@ -76,7 +76,7 @@
         <div class="modal-footer">
           <input type="hidden" name="idBarang" id="idBarang">
           <input type="hidden" name="operation" id="operation">
-          <input type="submit" name="actionButton" id="actionButton" class="btn hor-grd btn-grd-success" value="Tambah">
+          <input type="submit" name="actionButton" id="actionButton" class="btn hor-grd btn-grd-success" value="">
         </div>
         
       </div>
