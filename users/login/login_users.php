@@ -19,9 +19,13 @@ if(isset($_POST['__username']) && isset($_POST['__password']))
     $aktif= $row['status_aktif'];
     
     if(password_verify($__password, $pass)==$__password && $__username==$user && $aktif==1) {
-        session_start();
-        $_SESSION['__username'] = $__username;
-            header('location: ../../');
+      if(isset($_POST['rememberme'])){
+        setcookie('username', $__username, time() + (30 *  24 * 60 * 60 * 1000));
+        setcookie('password', $__password, time() + (30 *  24 * 60 * 60 * 1000));
+      }
+      session_start();
+      $_SESSION['__username'] = $__username;
+      header('location: ../../');
 
     }
     else

@@ -1,3 +1,7 @@
+<?php session_start() ?>
+<?php if (isset($_SESSION['__username'])): ?>
+<?php header('location: ../../home');?>
+<?php else: ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +60,7 @@
                                     <div class="col-sm-7 col-xs-12">
                                         <div class="checkbox-fade fade-in-primary">
                                             <label>
-                                                <input type="checkbox" value="">
+                                                <input type="checkbox" value="1" name="rememberme">
                                                 <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
                                                 <span class="text-inverse">Remember me</span>
                                             </label>
@@ -65,7 +69,7 @@
                                 </div>
                                 <div class="row m-t-30">
                                     <div class="col-md-12">
-                                        <button type="submit" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Login</button>
+                                        <button type="submit" name="login" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Login</button>
                                     </div>
                                 </div>
                                 <hr/>
@@ -96,3 +100,4 @@
 </body>
 
 </html>
+<?php endif; ?>

@@ -41,7 +41,8 @@
                                                         <thead>
                                                             <tr>
                                                                 <th>#</th>
-                                                                <th>ID Transaksi</th>
+                                                                <th>Dari</th>
+                                                                <th>Tanggal</th>
                                                                 <th width="30%">Rating</th>
                                                                 <th width="40%">Detail Review</th>
                                                             </tr>
@@ -63,7 +64,7 @@
 </html>
 <?php require_once('layout/modal.php'); ?>
 <?php require_once('layout/javascript.php'); ?>
-<script type="text/javascript" src=""></script>
+<script type="text/javascript" src="table_review/review.js"></script>
 <?php require_once('layout/custom_javascript.php'); ?>
 <?php else: ?>
 <?php header('location: ../users/login/login.php'); ?>

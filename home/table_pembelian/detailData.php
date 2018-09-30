@@ -26,7 +26,8 @@ if(isset($_POST["id"]))
                 <th>Barang</th>
                 <th>Merk</th>
                 <th>Harga</th>
-                <th>Jumlah Pembelian</th>
+                <th>Jumlah</th>
+                <th>Total (Harga*Jumlah)</th>
             </tr>
         </thead>';
         
@@ -40,6 +41,7 @@ if(isset($_POST["id"]))
                 <td>'.$data->merk_barang.'</th>
                 <td>'.$data->harga.'</th>
                 <td>'.$data->jumlah.'</th>
+                <td>'.($data->jumlah)*($data->harga).'</th>
             </tr>
         </tbody>
         ';

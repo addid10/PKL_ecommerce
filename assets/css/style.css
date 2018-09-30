@@ -14861,4 +14861,9 @@ button.view, button.delete, button.update {
     margin: 30px auto;
 }
 
+.icofont.rating{
+  font-size: 25px;
+  color: #0071f3;
+}
+
 /*# sourceMappingURL=style.css.map */
