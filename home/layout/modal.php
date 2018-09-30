@@ -115,4 +115,95 @@
   </div>
   <!--End Modal View-->
 
- 
+ <!-- Modal Info -->
+<div class="modal" id="infoModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Detail Info</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+        
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Status Beli</h6>
+                        <hr>
+                    </div>
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="label label-primary">Proses</label>
+                            </div>
+                            <div class="col-md-8">
+                                <p>Barang sedang dipersiapkan selagi menunggu status pembayaran telah lunas</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="label label-primary">Ambil Sendiri</label>
+                            </div>
+                            <div class="col-md-8">
+                                <p>Pembeli telah/akan mengambil barang</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="label label-primary">Pengiriman</label>
+                            </div>
+                            <div class="col-md-8">
+                                <p>Barang telah/akan dikirim ke pembeli</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="label label-primary">Dibatalkan</label>
+                            </div>
+                            <div class="col-md-8">
+                                <p>Pembelian dibatalkan</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="label label-primary">Dikembalikan</label>
+                            </div>
+                            <div class="col-md-8">
+                                <p>Barang dikembalikan ke toko</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Status Pembayaran</h6>
+                        <hr>
+                    </div>
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="label label-primary">Menunggu</label>
+                            </div>
+                            <div class="col-md-8">
+                                <p>Menunggu pembayaran oleh pembeli</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="label label-primary">Terbayar</label>
+                            </div>
+                            <div class="col-md-8">
+                                <p>Barang telah dibayar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn hor-grd btn-grd-danger" data-dismiss="modal">Close</button>
+            </div>     
+        </div>
+    </div>
+</div>
