@@ -32,11 +32,8 @@
                                     <div class="page-body">
                                         <div class="card">
                                             <div class="card-header">
-                                            <h3><i class="ti-bell"></i> Notifikasi</h3>
-                                            <span>Ini adalah tabel untuk daftar pembelian di mana admin mungkin akan mengatur <code data-toggle="tooltip" data-placement="top" data-trigger="hover" title="status barang untuk user">status barang</code> dan <code  data-toggle="tooltip" data-placement="top" data-trigger="hover" title="status pembayaran terhadap barang">status pembayaran</code> secara manual.</span>
-                                            <div class="text-right">
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#infoModal"><i class="icofont icofont-info-square"></i>Info</button>
-                                            </div>
+                                                <h3><i class="ti-bell"></i> Notifikasi</h3>
+                                                <span>Daftar notifikasi hasil dari proses pembelian.</span>
                                             </div>
                                             <div class="card-block table-border-style">
                                                 <div class="table-responsive">
@@ -44,12 +41,9 @@
                                                         <thead>
                                                             <tr>
                                                                 <th>#</th>
-                                                                <th>Tanggal</th>
-                                                                <th>Jumlah Barang</th>
-                                                                <th>Status Barang</th>
-                                                                <th>Total Harga</th>
-                                                                <th>Status Bayar</th>
-                                                                <th width="20%">Detail Pembelian</th>
+                                                                <th>Dari</th>
+                                                                <th>Waktu</th>
+                                                                <th>Tentang</th>
                                                             </tr>
                                                         </thead>
                                                     </table>

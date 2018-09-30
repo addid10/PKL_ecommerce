@@ -95,19 +95,8 @@
                                </a>
                                <ul class="show-notification profile-notification">
                                    <li>
-                                       <a href="#!">
-                                           <i class="ti-settings"></i> Settings
-                                       </a>
-                                   </li>
-                                   <li>
-                                       <a href="user-profile.html">
+                                       <a href="../home/profile.php">
                                            <i class="ti-user"></i> Profile
-                                       </a>
-                                   </li>
-                                   
-                                   <li>
-                                       <a href="auth-lock-screen.html">
-                                           <i class="ti-lock"></i> Lock Screen
                                        </a>
                                    </li>
                                    <li>

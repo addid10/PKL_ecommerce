@@ -118,8 +118,6 @@ $(document).ready(function(){
 				$('#harga').val(data.harga);
 				$('#keterangan').val(data.keterangan);
 				$('#merk_barang').val(data.merk_barang);
-				$('#kategori').hide();
-				$('#sub_kategori').hide();
 				$('#kat').hide();
 				$('#sub').hide();
 				

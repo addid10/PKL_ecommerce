@@ -14856,4 +14856,9 @@ button.view, button.delete, button.update {
   padding: 5px 15px;
 }
 
+.modal-dialog.detail-trans {
+    max-width: 900px !important;
+    margin: 30px auto;
+}
+
 /*# sourceMappingURL=style.css.map */

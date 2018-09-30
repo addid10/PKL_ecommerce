@@ -105,8 +105,6 @@
         
         <!-- Modal footer -->
         <div class="modal-footer">
-          <input type="hidden" name="idBarang" id="idBarang">
-          <input type="hidden" name="operation" id="operation">
           <button type="button" class="btn hor-grd btn-grd-danger" data-dismiss="modal">Close</button>
         </div>
         
@@ -129,7 +127,7 @@
             <div class="modal-body">
                 <div class="card">
                     <div class="card-header">
-                        <h6>Status Beli</h6>
+                        <h6>Status Barang</h6>
                         <hr>
                     </div>
                     <div class="card-block">
@@ -139,6 +137,14 @@
                             </div>
                             <div class="col-md-8">
                                 <p>Barang sedang dipersiapkan selagi menunggu status pembayaran telah lunas</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="label label-primary">Selesai</label>
+                            </div>
+                            <div class="col-md-8">
+                                <p>Barang telah dipersiapkan</p>
                             </div>
                         </div>
                         <div class="row">
@@ -207,3 +213,79 @@
         </div>
     </div>
 </div>
+
+
+<!-- Modal Add -->
+<div class="modal" id="beliModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <form method="post" id="beliForm" enctype="multipart/form-data">
+            <div class="modal-body">
+                <div class="form-group row" id="kat">
+                    <label class="col-sm-3 col-form-label">Status Barang</label>
+                    <div class="col-sm-9">
+                        <select name="status_barang" id="status_barang" class="form-control">
+                            <option value="Proses">Proses</option>
+                            <option value="Selesai">Selesai</option>
+                            <option value="Ambil Sendiri">Ambil Sendiri</option>
+                            <option value="Pengiriman">Pengiriman</option>
+                            <option value="Dibatalkan">Dibatalkan</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row" id="sub">
+                    <label class="col-sm-3 col-form-label">Status Bayar</label>
+                    <div class="col-sm-9">
+                        <select name="status_beli" id="status_beli" class="form-control">
+                            <option value="Menunggu">Menunggu</option>
+                            <option value="Terbayar">Terbayar</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <input type="hidden" name="id_transaksi_pembelian" id="id_transaksi_pembelian">
+          <input type="hidden" name="updateOperation" id="updateOperation">
+          <input type="submit" name="updateButton" id="updateButton" class="btn hor-grd btn-grd-success" value="">
+        </div>
+        </form>
+        
+        </div>
+    </div>
+</div>
+
+<!--Modal View-->
+<div class="modal" id="det_transaksiModal" width="1000px">
+    <div class="modal-dialog detail-trans">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div id="detailTransaksi"></div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn hor-grd btn-grd-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!--End Modal View-->

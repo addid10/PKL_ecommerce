@@ -14,7 +14,6 @@ if(isset($_POST["id_barang"]))
     
 	foreach($result as $row)
 	{
-		$hasilData["id_barang"]	        = $row["id_barang"];
 		$hasilData["nama_barang"]       = $row["nama_barang"];
 		$hasilData["harga"]    			= $row["harga"];
 		$hasilData["keterangan"]        = $row["keterangan"];

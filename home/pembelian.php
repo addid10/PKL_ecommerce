@@ -40,16 +40,17 @@
                                             </div>
                                             <div class="card-block table-border-style">
                                                 <div class="table-responsive">
-                                                    <table class="table" id="tabelReview">
+                                                    <table class="table" id="tabelPembelian">
                                                         <thead>
                                                             <tr>
                                                                 <th>#</th>
                                                                 <th>Tanggal</th>
-                                                                <th>Jumlah Barang</th>
+                                                                <th>Total Barang</th>
                                                                 <th>Status Barang</th>
                                                                 <th>Total Harga</th>
                                                                 <th>Status Bayar</th>
-                                                                <th width="20%">Detail Pembelian</th>
+                                                                <th>Update</th>
+                                                                <th>Detail Pembelian</th>
                                                             </tr>
                                                         </thead>
                                                     </table>
@@ -69,7 +70,7 @@
 </html>
 <?php require_once('layout/modal.php'); ?>
 <?php require_once('layout/javascript.php'); ?>
-<script type="text/javascript" src=""></script>
+<script type="text/javascript" src="table_pembelian/pembelian.js"></script>
 <?php require_once('layout/custom_javascript.php'); ?>
 <?php else: ?>
 <?php header('location: ../users/login/login.php'); ?>
