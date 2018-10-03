@@ -37,13 +37,14 @@
                                             </div>
                                             <div class="card-block table-border-style">
                                                 <div class="table-responsive">
-                                                    <table class="table" id="tabelReview">
+                                                    <table class="table" id="tabelNotifikasi">
                                                         <thead>
                                                             <tr>
-                                                                <th>#</th>
                                                                 <th>Dari</th>
+                                                                <th>Foto</th>
                                                                 <th>Waktu</th>
                                                                 <th>Tentang</th>
+                                                                <th width="15%">Telah dibaca</th>
                                                             </tr>
                                                         </thead>
                                                     </table>
@@ -63,7 +64,8 @@
 </html>
 <?php require_once('layout/modal.php'); ?>
 <?php require_once('layout/javascript.php'); ?>
-<script type="text/javascript" src=""></script>
+<script type="text/javascript" src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
+<script type="text/javascript" src="table_notifikasi/notifikasi.js"></script>
 <?php require_once('layout/custom_javascript.php'); ?>
 <?php else: ?>
 <?php header('location: ../users/login/login.php'); ?>

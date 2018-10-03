@@ -40,7 +40,7 @@ foreach($result as $row)
         $sub_array[] = '<label class="label label-danger">Admin</label>';
     }
     else{
-        $sub_array[] = '<label class="label label-info">User</lab';
+        $sub_array[] = '<label class="label label-info">User</label>';
     }
     $tgl_dibuat  = $row["tgl_dibuat"];
     $bergabung   = date("jS M Y", strtotime("$tgl_dibuat"));

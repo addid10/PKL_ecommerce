@@ -38,10 +38,24 @@ foreach($result as $row)
     $tanggal     = $row["tanggal_transaksi"];
     $tanggalBaru = date("jS M Y", strtotime("$tanggal"));
     $sub_array[] = $tanggalBaru;
-    if($row["rating"]==5)
-    {
+    if($row["rating"]==5){
         $sub_array[] = '<i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i>';
-    }
+	}
+	else if($row["rating"]==4){
+        $sub_array[] = '<i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star"></i>';
+	}
+	else if($row["rating"]==3){
+        $sub_array[] = '<i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i>';
+	}
+	else if($row["rating"]==2){
+        $sub_array[] = '<i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i>';
+	}
+	else if($row["rating"]==1){
+        $sub_array[] = '<i class="icofont icofont-star rating"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i>';
+	}
+	else{
+        $sub_array[] = '<i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i>';
+	}
     $sub_array[] = '<button type="button" name="view" 	id="'.$row["id_review"].'" class="btn btn-info view"><i class="ti-comments"></i> Detail Review</button>';
     $data[] = $sub_array;
 }

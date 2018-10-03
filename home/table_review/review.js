@@ -25,3 +25,20 @@ $(document).ready(function(){
 		dataTable.ajax.reload( null, false ); // user paging is not reset on reload
 	},3000);
 });
+
+	// View Data
+	$(document).on('click', '.view', function(){
+        var id = $(this).attr("id");
+        $.ajax({
+            url:"table_review/detailData.php",
+            method:"POST",
+            data:{
+                id:id
+            },
+            success:function(data){
+                $('#det_reviewModal').modal('show');
+                $('.modal-title').text("Detail Review");
+                $('#detReview').html(data);
+            }
+        });
+	});
