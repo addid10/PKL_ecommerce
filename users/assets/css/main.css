@@ -1425,8 +1425,8 @@ h2.title {
 
 #form {
   display: block;
-  margin-bottom: 185px;
-  margin-top: 185px;
+  margin-bottom: 50px;
+  margin-top: 40px;
   overflow: hidden;
 }
 
@@ -1443,7 +1443,7 @@ h2.title {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 300;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 
@@ -2520,8 +2520,19 @@ h2.title {
 
 img.img-product-size {
   display: block;
-  max-width:300px;
+  max-width:400px;
   max-height:225px;
   width: auto;
   height: auto;
+}
+
+div.contents-body{
+  padding:15px;
+  
+}
+
+button.verifikasi{
+  margin-top:0px !important;
+  padding:9px 25px !important;
+  margin-left:0px !important;
 }

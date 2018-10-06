@@ -28,7 +28,7 @@
                         <form class="md-float-material" method="POST" action="login_users.php">
                             <div class="text-center">
                                 <img src="../../assets/images/logo.png" alt="logo.png">
-                            </div>
+                            </div> 
                             <div class="auth-box">
                                 <div class="row m-b-20">
                                     <div class="col-md-12">

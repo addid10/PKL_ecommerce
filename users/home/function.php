@@ -15,13 +15,13 @@ function get_features_items(){
                             <img class="img-product-size" src="../../admin/home/table_barang/upload/'.$data->foto.'" alt="" />
                             <h2>Rp. '.$data->harga.',-</h2>
                             <p>'.$data->nama_barang.'</p>
-                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Tambah ke cart</a>
+                            <a href="#" id="'.$data->id_barang.'" class="btn btn-default add-to-cart"><i class="fa fa-check detail"></i>Detail Barang</a>
                         </div>
                     </div>
                     <div class="choose">
                         <ul class="nav nav-pills nav-justified">
-                            <li><a href="#" id="wishlist"><i class="fa fa-plus-square"></i>Tambah ke wishlist</a></li>
-                            <li><a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Tambah ke cart</a><li>
+                            <li><a href="#" id="'.$data->id_barang.'"><i class="fa fa-shopping-cart cart"></i>Add to cart</a></li>
+                            <li><a href="#" id="'.$data->id_barang.'"><i class="fa fa-plus-square wishlist"></i>Add to wishlist</a></li>
                         </ul>
                     </div>
                 </div>

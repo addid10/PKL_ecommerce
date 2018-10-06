@@ -5,7 +5,7 @@ $(document).ready(function(){
         var name     = $('#nama').val();
         var email    = $('#email').val();
 		var subjek   = $('#subjek').val();
-        var pesan    = $('#message').val();
+        var pesan    = $('#message').val(); 
 
         swal({
 			title: "Anda yakin akan mengirimkan pesan kepada kami?",

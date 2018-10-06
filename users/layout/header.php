@@ -38,7 +38,7 @@
 							<ul class="nav navbar-nav">
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                                 <li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="#"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="../users/login.php"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
 					</div>

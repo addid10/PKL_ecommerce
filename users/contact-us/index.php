@@ -20,7 +20,6 @@
 	    		<div class="col-sm-8">
 	    			<div class="contact-form">
 	    				<h2 class="title text-center">Hubungi Kami</h2>
-	    				<div class="status alert alert-success" style="display: none"></div>
 				    	<form id="contactForm" class="contact-form row" method="POST">
 				            <div class="form-group col-md-6">
 				                <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama" maxlength="30">
@@ -35,7 +34,7 @@
 				                <textarea id="message" name="message" required="required" class="form-control" rows="8" placeholder="Your Message Here"></textarea>
 				            </div>                        
 				            <div class="form-group col-md-12">
-				                <input type="submit" class="btn btn-primary pull-right" value="Submit">
+				                <input type="submit" class="btn btn-primary pull-right" value="Submit"> 
 				            </div>
 				        </form>
 	    			</div>

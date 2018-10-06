@@ -1,6 +1,8 @@
 <?php
 require('../database/db.php');
 
+if(isset($_POST['nama']) && isset($_POST['email']) && isset($_POST['message']) && isset($_POST['subjek']))
+{
     $nama    = $_POST['nama'];
     $email   = $_POST['email'];
     $pesan   = $_POST['message'];
@@ -17,4 +19,5 @@ require('../database/db.php');
     $statement->bindParam("email", $email);
 
     $statement->execute();
+}
 ?>
