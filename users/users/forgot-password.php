@@ -15,34 +15,23 @@
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2">
 					<div class="login-form"><!--login form-->
-						<form  method="POST" class="login-form row" action="verifikasi_users.php">
+						<form  method="POST" class="login-form row" action="fp_users.php">
                         
 				        <div class="form-group col-md-12">
-                            <div class="form-group col-md-12"><h2>Verifikasi Akun</h2></div>
+                            <div class="form-group col-md-12"><h2>Forgot Password</h2></div>
                         </div>
 				        <div class="form-group col-md-12">
                         <?php 
                         if(isset($_GET['_status'])){
                             $status = $_GET['_status'];
-                            echo '<div class="alert alert-success">
-                                        <strong>'.$status.'</strong>
-                                  </div>';
-                        }
-                        else if(isset($_GET['_kode'])){
-                            $kode = $_GET['_kode'];
-                            echo '<div class="alert alert-danger">
-                                        <strong>'.$kode.'</strong>.
-                                  </div>';
-                        }
-                        else{
-                            $status = '';
+                            echo $status;
                         }
                         ?>
                             <div class="form-group col-md-7">
-                                <input type="text" name="kode" class="form-control" placeholder="Kode Verifikasi" maxlength="6" required>
+                                <input type="email" name="email" class="form-control" placeholder="Masukkan email anda" maxlength="30" required>
                             </div>
                             <div class="form-group col-md-5">
-                                <button type="submit" class="btn btn-primary verifikasi">Verifikasi</button>
+                                <button type="submit" class="btn btn-primary verifikasi">Submit</button>
                             </div>
                         </div>
                         </form>

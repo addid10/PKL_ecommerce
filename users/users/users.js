@@ -1,6 +1,4 @@
 $(document).ready(function(){
-    document.getElementById("username").maxLength = "20";
-    document.getElementById("password").maxLength = "16";
 
     //Validasi
     $(document).on('submit', '#loginUsers', function(){

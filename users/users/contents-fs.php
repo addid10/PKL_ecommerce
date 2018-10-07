@@ -15,7 +15,7 @@
                     Kamu mendapatkan email ini karena kita menerima pemberitahuan bahwa kamu ingin mereset password kamu.
                 </div>
                 <div class="col-md-12">
-                    <button class="btn btn-primary">Reset Password</button>
+                    <a href="" class="btn btn-primary">Reset Password</a>
                 </div>
                 <div class="contents-body col-md-12">
                     Kalau kamu merasa tidak melakukan hal ini, jangan klik tombol di atas!
