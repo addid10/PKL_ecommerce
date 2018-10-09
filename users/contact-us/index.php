@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
 	<header id="header"><!--header-->
 		<?php require_once('../layout/header.php'); ?>
 	</header><!--/header-->
+	<div class="space-header"></div>
 	 
 	 <div id="contact-page" class="container">
     	<div class="bg">

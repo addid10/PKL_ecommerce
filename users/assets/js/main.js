@@ -28,3 +28,11 @@ $(document).ready(function(){
 		});
 	});
 });
+
+$(window).resize(function() {
+  $(".header_top").css('display:none !important');
+});
+
+$('#product').click(function() {
+	$('#detail').submit();
+});

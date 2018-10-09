@@ -22,7 +22,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
     
     if(password_verify($_password, $pass)==$_password && $_username==$user && $aktif==1) {
       session_start();
-      $_SESSION['username'] = $_username;
+      $_SESSION['_username'] = $_username;
       header('location:../');
 
     }

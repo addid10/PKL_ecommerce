@@ -45,7 +45,7 @@
                        </ul>
                        <ul class="nav-right">
                            <li class="header-notification">
-                               <a href="#!">
+                               <a href="#">
                                    <i class="ti-bell"></i>
                                    <span class="badge bg-c-pink"></span>
                                </a>

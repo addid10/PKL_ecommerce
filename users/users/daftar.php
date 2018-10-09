@@ -9,6 +9,7 @@
 	<header id="header">
 		<?php require_once('../layout/header.php'); ?>
     </header>
+    <div class="space-header"></div>
 
     <section id="form"><!--form-->
 		<div class="container">

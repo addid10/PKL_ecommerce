@@ -143,7 +143,7 @@ $(document).ready(function(){
                 $('#detailData').html(data);
             }
         });
-	   });
+	});
 	   
 	//Delete Data 
 	$(document).on('click','.delete',function(){

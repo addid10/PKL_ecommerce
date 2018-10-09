@@ -60,10 +60,7 @@ $body =
                     <h3>Hello!</h3>
                 </div>
                 <div class="col-md-12">
-                    Kode verifikasi akun FUFCA e-commerce anda adalah <b>'.$randomString.'</b> atau bisa dengan meng-klik link di bawah ini.
-                </div>
-                <div class="col-md-12">
-                    <a href="localhost/PKL_ecommerce/users/users/verifikasi_users.php?kode='.$randomString.'" class="btn btn-primary">Verifikasi Akun</a>
+                    Kode verifikasi akun FUFCA e-commerce anda adalah <b>'.$randomString.'</b>.
                 </div>
                 <div class="contents-body col-md-12">
                     Terimakasih telah bergabung dengan e-commerce kami. Kami harap anda menikmati layanan yang ada di dalamnya.

@@ -9,6 +9,7 @@
 	<header id="header">
 		<?php require_once('../layout/header.php'); ?>
     </header>
+    <div class="space-header"></div>
 
     <section id="form"><!--form-->
 		<div class="container">
@@ -22,13 +23,7 @@
                         </div>
 				        <div class="form-group col-md-12">
                         <?php 
-                        if(isset($_GET['_status'])){
-                            $status = $_GET['_status'];
-                            echo '<div class="alert alert-success">
-                                        <strong>'.$status.'</strong>
-                                  </div>';
-                        }
-                        else if(isset($_GET['_kode'])){
+                        if(isset($_GET['_kode'])){
                             $kode = $_GET['_kode'];
                             echo '<div class="alert alert-danger">
                                         <strong>'.$kode.'</strong>.

@@ -4,8 +4,7 @@ include('functionData.php');
 
 $lihatUsers  = '';
 $hasilUsers  = array();
-$lihatUsers .= "SELECT id, id_role, username, email, tgl_dibuat, telepon, alamat 
-FROM users FULL JOIN users_profile USING(id) ";
+$lihatUsers .= "SELECT * FROM users LEFT JOIN users_profile USING(id) ";
 
 if(isset($_POST["search"]["value"]))
 {
@@ -18,7 +17,7 @@ if(isset($_POST["order"]))
 }
 else
 {
-	$lihatUsers .= 'ORDER BY id_role ASC ';
+	$lihatUsers .= 'ORDER BY id_role AND id_users DESC ';
 }
 if($_POST["length"] != -1)
 {

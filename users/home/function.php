@@ -14,18 +14,27 @@ function get_features_items(){
                         <div class="productinfo text-center">
                             <img class="img-product-size" src="../../admin/home/table_barang/upload/'.$data->foto.'" alt="" />
                             <h2>Rp. '.$data->harga.',-</h2>
-                            <p>'.$data->nama_barang.'</p>
-                            <a href="#" id="'.$data->id_barang.'" class="btn btn-default add-to-cart"><i class="fa fa-check detail"></i>Detail Barang</a>
+                            <p>'.$data->nama_barang.'</p>         
+                            <form method="GET" action="../product-detail">
+                                <input type="hidden" name="id" value="'.$data->id_barang.'">
+                                <button type="submit" href="#" class="btn btn-default"><i class="fa fa-check detail"></i> Detail Barang</button>
+                            </form>        
                         </div>
                     </div>
                     <div class="choose">
                         <ul class="nav nav-pills nav-justified">
-                            <li><a href="#" id="'.$data->id_barang.'"><i class="fa fa-shopping-cart cart"></i>Add to cart</a></li>
-                            <li><a href="#" id="'.$data->id_barang.'"><i class="fa fa-plus-square wishlist"></i>Add to wishlist</a></li>
+                            <li><a href="#" id="add-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a></li>
+                            <li><a href="#" id="add-wishlist"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
                         </ul>
                     </div>
                 </div>
-            </div>    
+            </div>
+            
+            <form id="cart" method="POST" action="../cart">
+            </form>    
+            
+            <form id="cart" method="POST" action="../cart">
+            </form>    
         ';
     }
 }

@@ -17,11 +17,10 @@ if(isset($_POST['password']) && isset($_POST['id'])){
 
         $result = $statement->execute();
 
-        header('location: verifikasi.php?_status=Sukses! Password anda telah diubah!');
-        header('location: login.php');
+        header('location: login.php?_verify=Sukses! Password anda telah diubah!');
     }
     else{
-        header('location: verifikasi.php?_kode=Kode Verifikasi Salah!');
+        header('location: recovery.php?_status=Gagal!');
     }
         
 ?>

@@ -9,6 +9,7 @@
 	<header id="header">
 		<?php require_once('../layout/header.php'); ?>
     </header>
+    <div class="space-header"></div>
 
     <section id="form"><!--form-->
 		<div class="container">
@@ -30,6 +31,7 @@
                             <div class="form-group col-md-7">
                                 <input type="email" name="email" class="form-control" placeholder="Masukkan email anda" maxlength="30" required>
                             </div>
+                            <input type="hidden" name="random_token"/>
                             <div class="form-group col-md-5">
                                 <button type="submit" class="btn btn-primary verifikasi">Submit</button>
                             </div>

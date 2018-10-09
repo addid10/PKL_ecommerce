@@ -27,8 +27,7 @@ if(isset($_POST['kode'])){
         $statement->bindParam("_status", $status);
 
         $result = $statement->execute();
-        header('location: verifikasi.php?_status=Akun telah berhasil diverifikasi!');
-        header('location: login.php');
+        header('location: verifikasi.php?_verify=Akun telah berhasil diverifikasi!');
     }
     else{
         header('location: verifikasi.php?_kode=Kode Verifikasi Salah!');

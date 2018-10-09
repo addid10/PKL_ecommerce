@@ -9,6 +9,7 @@
 	<header id="header">
 		<?php require_once('../layout/header.php'); ?>
     </header>
+    <div class="space-header"></div>
 
     <section id="form"><!--form-->
 		<div class="container">
@@ -26,20 +27,21 @@
                             $id = $_GET['id'];
                             require_once('../database/db.php');
                             $recovery = $connection->prepare(
-                                "SELECT * FROM users WHERE id=:_id"
+                                "SELECT * FROM users WHERE random_token=:_id"
                             );
                             $recovery->bindParam("_id", $id);
                             $recovery->execute();
-                            $row = $recovery-fetch();
+                            $row = $recovery->fetch();
                             $idBaru = $row['id'];
-                            if($idBaru == $id){
-                                echo '<input type="hidden" name="id" value="'.$id.'" >';
+                            $rtoken = $row['random_token'];
+                            if($rtoken == $id){
+                                echo '<input type="hidden" name="id" value="'.$idBaru.'" >';
                             }
                         }
                         else if(isset($_GET['_status']))
                         {
                             $status = $_GET['_status'];
-                            echo '<div class="alert alert-success">
+                            echo '<div class="alert alert-danger">
                                         <strong>'.$status.'</strong>
                                   </div>';
                         }

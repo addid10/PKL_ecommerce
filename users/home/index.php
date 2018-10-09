@@ -9,6 +9,7 @@
 	<header id="header"><!--header-->
 		<?php require_once('../layout/header.php'); ?>
 	</header><!--/header-->
+	<div class="space-header"></div>
 	
 	<section id="slider"><!--slider-->
 		<?php require_once('../layout/slider.php'); ?>
