@@ -82,27 +82,57 @@
 								<div class="col-sm-8">
 									<div class="contact-form">
 										<form id="contactForm" class="contact-form row" method="POST">
-											<div class="form-group col-md-2">
-												<label>Nama</label>
+											<div class="form-group col-md-3">
+												<label class="pull-right">Nama</label>
 											</div>
-											<div class="form-group col-md-10">
+											<div class="form-group col-md-9">
 												<input type="text" id="subjek" name="subjek" class="form-control" required="required" placeholder="Subject" maxlength="30">
 											</div>
-											<div class="form-group col-md-2">
-												<label>Telepon</label>
+											<div class="form-group col-md-3">
+												<label class="pull-right">Username</label>
 											</div>
-											<div class="form-group col-md-10">
-												<div class="col-md-3">
-													<p>082255999499</p>
+											<div class="form-group col-md-9">
+												<div class="col-md-5">
+													<p class="user-name">atalie</p>
+												</div>
+											</div>
+											<div class="form-group col-md-3">
+												<label class="pull-right">Email</label>
+											</div>
+											<div class="form-group col-md-9">
+												<div class="col-md-5">
+													<p>mukadua@gmail.com</p>
 												</div>
 												<div class="col-md-3">
 													<a><u>Ubah</u></a>
 												</div>
-											</div>                       
+											</div>
+											<div class="form-group col-md-3">
+												<label class="pull-right">Alamat</label>
+											</div>
+											<div class="form-group col-md-9">
+												 <textarea name="alamat" required="required" class="form-control" rows="8" placeholder="Alamat"></textarea>
+											</div> 
+											<div class="form-group col-md-3">
+												<label class="pull-right">Jenis Kelamin</label>
+											</div>
+											<div class="form-group col-md-9">
+												<label class="radio-inline"><input type="radio" value="L">Laki-laki</label>
+												<label class="radio-inline"><input type="radio" value="P">Perempuan</label>
+											</div>                          
 											<div class="form-group col-md-12">
 												<input type="submit" class="btn btn-primary pull-right" value="Submit"> 
 											</div>
 										</form>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="col-md-12">
+										<img class="img-radius-profile" src="../assets/images/user/default.jpg">
+									</div>
+									<div class="col-md-12" style="padding:20px;text-align:center;color:#b0b0b0">
+										<p>Ukuran maks. 1 MB<br>Format .PNG, .JPEG, .JPG</p>
+										<input id="file-upload" type="file"/>
 									</div>
 								</div>
 							</div>

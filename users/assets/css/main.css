@@ -2556,7 +2556,7 @@ button.verifikasi{
 }
 
 .space-header{
-  margin-bottom:150px;
+  margin-bottom:100px;
 }
 
 .img-radius{
@@ -2569,3 +2569,23 @@ button.verifikasi{
   height: auto;
   border:1px solid #666663;
 }
+
+.img-radius-profile{
+  border-radius:50%;
+  display: block;
+  max-width:100px;
+  max-height:100px;
+  margin:auto;
+  margin-top:20px;
+  width: auto;
+  height: auto;
+  border:1px solid #666663;
+}
+
+p.user-name{
+  font-size:17px;
+  font-weight:bold;
+  font-style:italic;
+  text-decoration: underline;
+}
+
