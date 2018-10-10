@@ -2589,3 +2589,7 @@ p.user-name{
   text-decoration: underline;
 }
 
+.btn-length{
+  padding:10px !important;
+  width:100%;
+}

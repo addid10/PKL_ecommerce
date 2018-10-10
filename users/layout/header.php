@@ -58,7 +58,7 @@
 										<li><a href="../wishlist">Wishlist</a></li> 
                                     </ul>
                                 </li> 
-								<li class="dropdown"><a href="../profile"><i class="fa fa-user"></i>  <?php echo $_SESSION['_username'];?><i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="#"><i class="fa fa-user"></i>  <?php echo $_SESSION['_username'];?><i class="fa fa-angle-down"></i></a>
 									<ul role="menu" class="sub-menu">
 										<li><a href="../profile">Profile</a></li>
 										<li><a href="#" id="log">Logout</a></li>
