@@ -33,6 +33,9 @@ if(isset($_POST["password_lama"]) && isset($_POST["password_baru"]))
 			header('location: change_password.php?status=Password berhasil diperbaharui!');
 		}
     }
+    else {
+        header('location: change_password.php?_status=Password lama anda salah!');
+    }
 }
 
 ?>

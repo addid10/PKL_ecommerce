@@ -4,16 +4,15 @@ $(document).ready(function(){
         event.preventDefault();
         
         var name     = $('#nama').val();
-        var foto     = $('#foto').val();
+        var foto     = $('#foto').val().split('.').pop().toLowerCase();
 		var alamat   = $('#alamat').val();
-		var telepon   = $('#telepon').val();
+		var telepon  = $('#telepon').val();
 
         swal({
 			title: "Yakin ingin mengubah profil ini?",
 			text: "Profile akan diperbaharui otomatis",
 			icon: "info",
-			buttons: ["Batal", "Yakin"],
-            confirmButtonColor: '#8CD4F5'
+			buttons: ["Batal", "Yakin"]
         })
         .then((willDelete) => {
             if (willDelete) {
@@ -38,6 +37,9 @@ $(document).ready(function(){
 		            	data:new FormData(this),
 		            	contentType:false,
                         processData:false,
+                        success:function(data){
+                            window.location.reload();
+                        }
                     });
                 }
                 else

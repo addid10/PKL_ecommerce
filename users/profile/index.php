@@ -82,11 +82,12 @@
 									<div class="col-md-12" style="padding:20px;text-align:center;color:#b0b0b0">
 										<p>Ukuran maks. 1 MB<br>Format .PNG, .JPEG, .JPG</p>
 										<input id="foto" type="file" name="foto"/>
-										<input type="hidden" name="hidden_foto" value="'<?php echo $profile->foto;?>'">
+										<input type="hidden" name="hidden_foto" value="<?php echo $profile->foto;?>">
 									</div>
 								</div>
 								                      
 								<div class="form-group col-md-12">
+									<input type="hidden" name="id" value="<?php echo $profile->id_users;?>">
 									<input type="submit" class="btn btn-primary pull-right btn-length" value="Submit"> 
 								</div>
 							</div>

@@ -28,6 +28,12 @@
                                         <strong>'.$status.'</strong>
                                   </div>';
 						}
+						else if(isset($_GET['_status'])){
+							$status = $_GET['_status'];
+                            echo '<div class="alert alert-danger">
+                                        <strong>'.$status.'</strong>
+                                  </div>';
+						}
 						?>
 						<div class="col-md-12 panel-group category-products">
 							<div class="panel panel-default">

@@ -1,14 +1,14 @@
 <?php
-include('db.php');
-include('functionData.php');
+include('../database/db.php');
+include('function.php');
 
-if(isset($_POST["operation"]))
+if(isset($_POST["nama"]) && isset($_POST["telepon"]) && isset($_POST["alamat"]) && isset($_POST["gender"]))
 {
     $nama     = $_POST['nama'];
     $telepon  = $_POST['telepon'];
     $alamat   = $_POST['alamat'];
     $gender   = $_POST['gender'];
-    $foto     = $_POST['foto'];
+    $id       = $_POST['id'];
 
 	$image = '';
     if($_FILES["foto"]["name"] != '')		
@@ -17,24 +17,24 @@ if(isset($_POST["operation"]))
     }
     else
     {
-		$image = $_POST["hiddenFoto"];
+		$image = $_POST["hidden_foto"];
 	}
 	$statement = $connection->prepare(
-		"UPDATE barang SET 
-		nama_barang	     = :nama_barang, 
-		harga 	         = :harga,
-		keterangan       = :keterangan,
-		foto             = :foto,
-		merk_barang      = :merk_barang
-		WHERE id_barang  = :_idBarang"
+		"UPDATE users_profile SET 
+		nama_users	     = :_nama, 
+		telepon          = :_telepon,
+		alamat           = :_alamat,
+		foto             = :_foto,
+		jenis_kelamin    = :_gender
+		WHERE id_users   = :_id"
     );
         
-    $statement->bindParam("_idBarang", $id_barang);
-        $statement->bindParam("nama_barang", $nama_barang);
-        $statement->bindParam("harga", $harga);
-        $statement->bindParam("keterangan", $keterangan);
-        $statement->bindParam("merk_barang", $merk_barang);
-        $statement->bindParam("foto", $image);
+        $statement->bindParam("_id", $id);
+        $statement->bindParam("_nama", $nama);
+        $statement->bindParam("_telepon", $telepon);
+        $statement->bindParam("_alamat", $alamat);
+        $statement->bindParam("_gender", $gender);
+        $statement->bindParam("_foto", $image);
         $result = $statement->execute();
         
 		if(!empty($result))

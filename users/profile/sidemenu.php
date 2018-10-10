@@ -1,3 +1,4 @@
+			<?php require_once('url.php'); ?>
 			<div class="row">
 				<div class="col-md-3">
 					<div class="left-sidebar">
@@ -26,7 +27,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a href="#" class="active-profile">
+										<a href="../profile" class="<?php if($sub_url=="profile" AND $url=="" OR $url=="index.php"){ echo "active-profile";}?>">
 												<span class="badge pull-right"><i class="fa fa-user"></i></span>
 												Akun saya
 										</a>
@@ -36,7 +37,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a href="change_password.php">
+										<a href="change_password.php" class="<?php if($url=="change_password.php"){ echo "active-profile";}?>">
 												<span class="badge pull-right"><i class="fa fa-key"></i></span>
 												Ganti Password
 										</a>
@@ -46,7 +47,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a href="#">
+										<a href="#" class="">
 												<span class="badge pull-right"><i class="fa fa-list"></i></span>
 												Belanjaan saya
 										</a>
