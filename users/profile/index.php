@@ -15,90 +15,20 @@
 	<div class="space-header"></div>
 	<section>
 		<div class="container">
-			<div class="row">
-				<div class="col-md-3">
-					<div class="left-sidebar">
-						<h2>Profile</h2>
-						<div class="col-md-12 panel-group category-products">
-							<div class="panel panel-default">
-								<h4 class="panel-title">
-									<div class="col-md-4">
-										<img class="img-radius" src="../assets/images/user/<?php echo $profile->foto;?>">
-									</div>
-									<div class="col-md-8" style="padding-top:5px;">
-										<p style="color:#000">
-										<?php if($profile->nama_users==''){
-											echo "Tanpa Nama";
-										} 
-										else{
-											echo $profile->nama_users;
-										}
-										?></p>
-										<a href="../profile"><i class="fa fa-pencil"></i> Edit Profile</a>
-									</div>
-								</h4>
-							</div>
-							<hr>
-							<div class="">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a href="#" class="active-profile">
-												<span class="badge pull-right"><i class="fa fa-user"></i></span>
-												Akun saya
-										</a>
-									</h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a href="#">
-												<span class="badge pull-right"><i class="fa fa-list"></i></span>
-												Belanjaan saya
-										</a>
-									</h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a href="#">
-												<span class="badge pull-right"><i class="fa fa-bell"></i></span>
-												Notifikasi
-										</a>
-									</h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a href="#">
-												<span class="badge pull-right"><i class="fa fa-shopping-cart"></i></span>
-												Cart
-										</a>
-									</h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a href="#">
-												<span class="badge pull-right"><i class="fa fa-heart"></i></span>
-												Wishlist
-										</a>
-									</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<?php require_once('sidemenu.php'); ?>
 			<!-- Detail Profile -->
 			<div class="col-md-9">
 				<div class="left-sidebar">
 					<form id="profileForm" class="contact-form row" enctype="multipart/form-data">
 						<h2 class="title text-center">Detail Profile</h2>
+						<?php
+						if(isset($_GET['status'])){
+                            $status = $_GET['status'];
+                            echo '<div class="alert alert-success">
+                                        <strong>'.$status.'</strong>
+                                  </div>';
+						}
+						?>
 						<div class="col-md-12 panel-group category-products">
 							<div class="panel panel-default">
 								<div class="col-sm-8">
@@ -122,7 +52,7 @@
 											<input type="text" value="<?php echo $profile->email; ?>" class="form-control" disabled>
 										</div>
 										<div class="col-md-2">
-											<a><h4><u>Ubah</u></h4></a>
+											<button class="btn btn-warning" data-toggle="modal" data-target="#editEmail">Ubah</button>
 										</div>
 										<div class="form-group col-md-3">
 											<label class="pull-left">Telepon</label>
@@ -151,7 +81,8 @@
 									</div>
 									<div class="col-md-12" style="padding:20px;text-align:center;color:#b0b0b0">
 										<p>Ukuran maks. 1 MB<br>Format .PNG, .JPEG, .JPG</p>
-										<input id="file-upload" type="file" value="<?php echo $profile->foto;?>"/>
+										<input id="foto" type="file" name="foto"/>
+										<input type="hidden" name="hidden_foto" value="'<?php echo $profile->foto;?>'">
 									</div>
 								</div>
 								                      
@@ -170,7 +101,7 @@
 		<?php require_once('../layout/footer.php');?>	
 	</footer><!--/Footer-->
 	
-  
+<?php require_once('../layout/modal.php'); ?>
 <?php require_once('../layout/javascript.php');?>
 <script src="profile.js"></script>
 <?php require_once('../layout/cs_javascript.php');?>

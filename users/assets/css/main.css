@@ -229,7 +229,7 @@ a#scrollUp i{
   top:0px;
   width:100%;
   background:#FFF;
-  z-index:9999;
+  z-index:999;
   box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 

@@ -1,9 +1,10 @@
+//Perbaharui lagi nanti!
 $(document).ready(function(){
     $(document).on('submit', '#profileForm', function(event){
         event.preventDefault();
         
         var name     = $('#nama').val();
-        var foto     = $('#file-upload').val();
+        var foto     = $('#foto').val();
 		var alamat   = $('#alamat').val();
 		var telepon   = $('#telepon').val();
 
@@ -47,7 +48,16 @@ $(document).ready(function(){
             }
         });
     });
-
+    //Confirm Password
+    $('#confirm_password').on('keyup', function () {
+        if ($('#password_baru').val() == $('#confirm_password').val()) {
+            $('#message').html('Password cocok!').css('color', 'green');
+        } 
+        else {
+            $('#message').html('Password tidak cocok!').css('color', 'red');
+        }
+          
+    });
     $(document).ready(function(){
         
     });
