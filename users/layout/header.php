@@ -42,7 +42,9 @@
 					</div>
 					<div class="col-sm-5">
 						<div class="search_box pull-right collapse navbar-collapse">
-							<input type="text" placeholder="Search"/>
+						<form id="search" action="../search/" method="GET">
+							<input type="text" name="q" placeholder="Search"/>
+						</form>
 						</div>
 					</div>
 					<div class="col-sm-5">

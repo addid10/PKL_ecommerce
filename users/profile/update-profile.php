@@ -39,7 +39,7 @@ if(isset($_POST["nama"]) && isset($_POST["telepon"]) && isset($_POST["alamat"]) 
         
 		if(!empty($result))
 		{
-			header('location: index.php?status=Data berhasil diperbaharui!');
+			header('location: akun.php?status=Data berhasil diperbaharui!');
 		}
 }
 

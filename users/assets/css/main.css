@@ -2596,3 +2596,13 @@ p.user-name{
   padding:10px !important;
   width:100%;
 }
+
+.tab-profile{
+  text-align:center !important;
+  width:168px;
+}
+
+
+.tab-profile a{
+  color:#000;
+}

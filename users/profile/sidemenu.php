@@ -27,7 +27,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a href="../profile" class="<?php if($sub_url=="profile" AND $url=="" OR $url=="index.php"){ echo "active-profile";}?>">
+										<a href="akun.php" class="<?php if($url=="akun.php"){ echo "active-profile";}?>">
 												<span class="badge pull-right"><i class="fa fa-user"></i></span>
 												Akun saya
 										</a>
@@ -47,7 +47,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a href="#" class="">
+										<a href="../profile" class="<?php if($sub_url=="profile" AND $url=="" OR $url=="index.php"){ echo "active-profile";}?>">
 												<span class="badge pull-right"><i class="fa fa-list"></i></span>
 												Belanjaan saya
 										</a>
