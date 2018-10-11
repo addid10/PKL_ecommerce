@@ -1185,6 +1185,8 @@ h2.title {
 
 .view-product img {
   border: 1px solid #F7F7F0;
+  object-fit: cover;
+  object-position: 50% 0;
   height: 380px;
   width: 100%;
 }
@@ -2537,11 +2539,13 @@ h2.title {
 }
 
 img.img-product-size {
+  border-radius:10px;
   display: block;
-  max-width:400px;
-  max-height:225px;
-  width: auto;
-  height: auto;
+  object-fit: cover;
+  object-position: 50% 0;
+  width: 200px;
+  height: 200px;
+  margin:auto;
 }
 
 div.contents-body{

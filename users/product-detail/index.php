@@ -33,7 +33,7 @@ $detail = $statement->fetch();
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
 							<div class="view-product">
-								<img src="../../admin/home/table_barang/upload/<?php echo $detail['foto']; ?>" alt="" />
+								<img id="zoom" src="../../admin/home/table_barang/upload/<?php echo $detail['foto']; ?>" data-zoom-image="../../admin/home/table_barang/upload/<?php echo $detail['foto']; ?>" />
 							</div>
 						</div>
 						<div class="col-sm-7">

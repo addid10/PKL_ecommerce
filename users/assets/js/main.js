@@ -36,3 +36,5 @@ $(window).resize(function() {
 $('#product').click(function() {
 	$('#detail').submit();
 });
+
+$("#zoom").elevateZoom();
