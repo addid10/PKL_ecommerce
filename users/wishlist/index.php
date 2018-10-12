@@ -42,6 +42,12 @@ if(isset($_SESSION['_username'])){
 							<div class="col-sm-3">
 								<div class="product-image-wrapper">
 									<div class="single-products">
+										<form method="POST" action="delete.php">
+											<div class="delete-wishlist">
+												<input type="hidden" name="id" value="<?php echo $data->id_wishlist ?>">
+												<button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-trash"></span></button>
+											</div>
+										</form>
 										<div class="productinfo text-center">
 											<img class="img-product-size-f2" src="../../admin/home/table_barang/upload/<?php echo $data->foto ?>" alt="" />
 											<h2 class="product-price">Rp. <?php echo $data->harga ?>,-</h2>
