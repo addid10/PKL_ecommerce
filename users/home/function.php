@@ -18,21 +18,20 @@ function get_features_items(){
                             <form method="GET" action="../product-detail">
                                 <input type="hidden" name="id" value="'.$data->id_barang.'">
                                 <button type="submit" href="#" class="btn btn-default"><i class="fa fa-check detail"></i> Detail Barang</button>
-                            </form>        
+                            </form>  
                         </div>
                     </div>
                     <div class="choose">
-                        <ul class="nav nav-pills nav-justified">
-                            <li><a href="#" id="add-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a></li>
-                            <li><a href="#" id="add-wishlist"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                        <form id="wishlist" method="POST" action="../wishlist/add.php">
+                        <ul class="nav nav-pills nav-justified"> 
+                            <input type="hidden" id="add-id" name="id" value="'.$data->id_barang.'">
+                            <li><button type="submit" id="add-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
+                            <li><button type="submit" id="add-wishlist" href="#"><i class="fa fa-plus-square"></i>Add to wishlist</button></li>
+                        </form>       
                         </ul>
                     </div>
                 </div>
             </div>
-            
-            <form id="cart" method="POST" action="../cart">
-            </form>    
-            
             <form id="cart" method="POST" action="../cart">
             </form>    
         ';

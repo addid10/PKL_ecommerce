@@ -22,9 +22,15 @@
 					<form id="profileForm" class="contact-form row" enctype="multipart/form-data">
 						<h2 class="title text-center">Detail Profile</h2>
 						<?php
-						if(isset($_GET['status'])){
-                            $status = $_GET['status'];
+						if(isset($_GET['sukses'])){
+                            $status = $_GET['sukses'];
                             echo '<div class="alert alert-success">
+                                        <strong>'.$status.'</strong>
+                                  </div>';
+						}
+						else if(isset($_GET['gagal'])){
+                            $status = $_GET['gagal'];
+                            echo '<div class="alert alert-danger">
                                         <strong>'.$status.'</strong>
                                   </div>';
 						}
@@ -87,6 +93,7 @@
 								</div>
 								                      
 								<div class="form-group col-md-12">
+									<input type="hidden" name="hidden_id" value="<?php echo $profile->id;?>">
 									<input type="hidden" name="id" value="<?php echo $profile->id_users;?>">
 									<input type="submit" class="btn btn-primary pull-right btn-length" value="Submit"> 
 								</div>

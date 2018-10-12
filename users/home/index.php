@@ -72,5 +72,6 @@
   
 <?php require_once('../layout/javascript.php');?>
 <?php require_once('../layout/cs_javascript.php');?>
+<script src="home.js"></script>
 </body>
 </html>

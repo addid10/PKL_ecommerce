@@ -58,16 +58,19 @@ if(isset($_GET['q'])){
                                     </div>
                                 </div>
                                 <div class="choose">
-                                    <ul class="nav nav-pills nav-justified">
-                                        <li><a href="#" id="add-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a></li>
-                                        <li><a href="#" id="add-wishlist"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    </ul>
+                                    <form id="wishlist" method="POST" action="../wishlist/add.php">
+                                        <ul class="nav nav-pills nav-justified"> 
+                                            <input type="hidden" id="add-id" name="id" value="'.$data->id_barang.'">
+                                            <li><button type="submit" id="add-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
+                                            <li><button type="submit" id="add-wishlist" href="#"><i class="fa fa-plus-square"></i>Add to wishlist</button></li>
+                                        </ul>
+                                    </form>  
                                 </div>
                             </div>
                         </div>
                         <?php endforeach ?>
 					</div><!--features_items-->
-				</div>
+				</div> 
 			</div>
 		</div>
 	</section>

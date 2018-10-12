@@ -36,10 +36,10 @@ if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password
     $statement2->bindParam("_rtoken", $randomString);
     $statement2->bindParam("_tgl_dibuat", $date);
     $statement2->bindParam("statusAktif", $statusAktif);
-
     $statement2->execute();
 
-    $body = "Tes";
+    
+    
 
     if($statement2) {
         header('location: verifikasi.php?_status=Berhasil! Silahkan verifikasi akun anda. Kami telah mengirimkan kode konfirmasi pada email anda.');

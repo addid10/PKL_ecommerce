@@ -6,12 +6,12 @@ function upload_image()
 	{
 		$extension = explode('.', $_FILES['foto']['name']);
 		$new_name = rand() . '.' . $extension[1];
-		$destination = './upload/' . $new_name;
+		$destination = 'upload/' . $new_name;
 		move_uploaded_file($_FILES['foto']['tmp_name'], $destination);
 		return $new_name;
 	}
 }
-
+ 
 function get_image_name($id_barang)
 {
 	include('db.php');

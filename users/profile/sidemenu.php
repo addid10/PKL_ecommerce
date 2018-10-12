@@ -27,7 +27,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a href="akun.php" class="<?php if($url=="akun.php"){ echo "active-profile";}?>">
+										<a href="../profile/akun.php" class="<?php if($url=="akun.php"){ echo "active-profile";}?>">
 												<span class="badge pull-right"><i class="fa fa-user"></i></span>
 												Akun saya
 										</a>
@@ -37,7 +37,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a href="change_password.php" class="<?php if($url=="change_password.php"){ echo "active-profile";}?>">
+										<a href="../profile/change_password.php" class="<?php if($url=="change_password.php"){ echo "active-profile";}?>">
 												<span class="badge pull-right"><i class="fa fa-key"></i></span>
 												Ganti Password
 										</a>
@@ -77,7 +77,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a href="#">
+										<a href="../wishlist" class="<?php if($sub_url=="wishlist" AND $url=="" OR $url=="index.php"){ echo "active-profile";}?>">
 												<span class="badge pull-right"><i class="fa fa-heart"></i></span>
 												Wishlist
 										</a>

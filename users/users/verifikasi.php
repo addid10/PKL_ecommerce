@@ -29,6 +29,12 @@
                                         <strong>'.$kode.'</strong>.
                                   </div>';
                         }
+                        else if(isset($_GET['_status'])){
+                            $kode = $_GET['_status'];
+                            echo '<div class="alert alert-success">
+                                        <strong>'.$kode.'</strong>.
+                                  </div>';
+                        }
                         else{
                             $status = '';
                         }

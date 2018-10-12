@@ -665,7 +665,9 @@ ul.sub-menu {
 .right {
   right: 0;
 }
-
+h2.product-price{
+  font-size:16px !important;
+}
 .category-products {
   border: 1px solid #F7F7F0;
   margin-bottom: 35px;
@@ -985,21 +987,25 @@ h2.title {
 
 .choose {
   border-top: 1px solid #F7F7F0;
+  text-align:center;
+  padding:8px;
 }
 
-.choose ul li a {
+.choose ul li button {
   color: #B3AFA8;
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   padding-left: 0;
   padding-right: 0;
+  background-color:transparent;
+  border:0px;
 }
 
-.choose ul li a i{
+.choose ul li button i{
 	margin-right:5px;
 }
 
-.choose ul li a:hover{
+.choose ul li button:hover{
 	background:none;
 	color:#FE980F;
 }
@@ -1187,7 +1193,7 @@ h2.title {
   border: 1px solid #F7F7F0;
   object-fit: cover;
   object-position: 50% 0;
-  height: 380px;
+  height: 400px;
   width: 100%;
 }
 
@@ -1228,12 +1234,16 @@ h2.title {
 	background:#ccccc6;
 }
 
+.no-padding{
+  padding:0px !important;
+}
+
 .product-information {
   border: 1px solid #F7F7F0;
   overflow: hidden;
-  padding-bottom: 60px;
-  padding-left: 60px;
-  padding-top: 60px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-top: 5px;
   position: relative;
 }
 
@@ -2548,9 +2558,61 @@ img.img-product-size {
   margin:auto;
 }
 
+img.img-product-size-f2 {
+  display: block;
+  object-fit: cover;
+  object-position: 50% 0;
+  width: 100px;
+  height: 100px;
+  margin:auto;
+}
+
+.product-name{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size:20px;
+  padding-bottom:5px;
+}
+
+.product-review-text{
+  text-transform: capitalize;
+  font-size:14px;
+}
+
+.product-rating{
+  font-size:15px;
+  color:#FE980F;
+  border-right:1px solid rgb(228, 225, 225);
+}
+
+.product-quantity{
+  padding-top:15px;
+}
+
+.product-padding{
+  padding-left:0px;
+}
+
+.product-padding-top{
+  padding-top:5px;
+  padding-bottom:10px;
+}
+
+.product-bg{
+  padding:10px;
+  padding-left:15px;
+  background:#F9F9F9;
+  border-radius:4px;
+}
+
+.product-price{
+  font-size:25px;
+  color:#FE980F;
+  font-weight:bold;
+}
+
 div.contents-body{
   padding:15px;
-  
 }
 
 button.verifikasi{
@@ -2605,4 +2667,81 @@ p.user-name{
 
 .tab-profile a{
   color:#000;
+}
+
+/* -- quantity box -- */
+
+.quantity {
+  display: inline-block; }
+ 
+ .quantity .input-text.qty {
+  width: 150px;
+  height: 41px;
+  padding: 0PX;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #d0d0d0;
+ }
+ 
+ .quantity.buttons_added {
+  text-align: left;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: top; }
+ 
+ .quantity.buttons_added input {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+  box-shadow: none;
+ }
+ 
+ .quantity.buttons_added .minus,
+ .quantity.buttons_added .plus {
+  padding: 7px 10px 8px;
+  height: 41px;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  cursor:pointer;}
+ 
+ .quantity.buttons_added .minus {
+  border-right: 0; }
+ 
+ .quantity.buttons_added .plus {
+  border-left: 0; }
+ 
+ .quantity.buttons_added .minus:hover,
+ .quantity.buttons_added .plus:hover {
+  background: #eeeeee; }
+ 
+ .quantity input::-webkit-outer-spin-button,
+ .quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0; }
+  
+  .quantity.buttons_added .minus:focus,
+ .quantity.buttons_added .plus:focus {
+  outline: none; }
+ 
+ .order-now{
+   width:100%;
+   padding:10px;
+   background: #FE980F;
+   font-size:15px;
+   color:#FFF;
+   border:0px;
+ }
+
+ .cart-now{
+  width:100%;
+  padding:10px;
+  font-size:15px;
+ }
+
+ .product-keterangan{
+  padding-top:10px;
+  padding-bottom:10px;
+  font-size:18px;
+  font-weight:500;
 }
