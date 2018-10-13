@@ -59,12 +59,12 @@ if(isset($_SESSION['_username'])){
 										</div>
 									</div>
 									<div class="choose">
-										<form id="wishlist" method="POST" action="../wishlist/add.php">
+										<form id="cart" method="POST" action="../cart/add.php">
 											<ul class="nav nav-pills nav-justified"> 
-												<input type="hidden" id="add-id" name="id" value="'.$data->id_barang.'">
+												<input type="hidden" id="add" name="id" value="<?= $data->id_barang ?>">
 												<li><button type="submit" id="add-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
 											</ul>
-										</form>  
+										</form>   
 									</div>
 								</div>
 							</div>

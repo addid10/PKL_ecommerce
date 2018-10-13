@@ -1,41 +1,46 @@
-<?php
-    require('../database/db.php');
-    $statement = $connection->prepare(
-        "SELECT * FROM barang");
-    $statement->execute();
-    $result = $statement->fetchAll(PDO::FETCH_OBJ);
-?>
-<?php foreach ($result as $data): ?>
-            <div class="col-sm-4">
-                <div class="product-image-wrapper">
-                    <div class="single-products">
-                        <div class="productinfo text-center">
-                            <img class="img-product-size" src="../../admin/home/table_barang/upload/'<?= $data->foto?>" alt="" />
-                            <h2>Rp. <?= $data->harga?>,-</h2>
-                            <p><?= $data->nama_barang ?></p>         
-                            <form method="GET" action="../product-detail">
-                                <input type="hidden" name="id" value="<?= $data->id_barang ?>">
-                                <button type="submit" href="#" class="btn btn-default"><i class="fa fa-check detail"></i> Detail Barang</button>
-                            </form>  
-                        </div>
-                    </div>
-                    <div class="choose">
-                        <ul class="nav nav-pills nav-justified">      
-                            <li><a href="#" id="add-cart"><i class="fa fa-shopping-cart"></i><?= $data->id_barang?></a></li>
-                            <li><a href="#" id="add-wishlist" href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <form id="wishlist" method="POST" action="../wishlist/add.php">
-                <input type="text" id="add-id" name="id" value="<?= $data->id_barang?>">
-            </form>  
-            <form id="cart" method="POST" action="../cart">
-            </form>    
-    <?php endforeach ?>
-
-<script>
-$('#add-wishlist').click(function() {
-    $('#wishlist').submit();
-});
-</script>
+<head>
+<?php require_once('../layout/head.php');?>
+</head> 
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container">
+  <h3>Collapsible Navbar</h3>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+</div>
+<?php require_once('../layout/javascript.php');?>
+<script src="users.js"></script>
+<?php require_once('../layout/cs_javascript.php');?>
+</body>
+</html>
