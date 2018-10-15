@@ -47,7 +47,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a href="../profile" class="<?php if($sub_url=="profile" AND $url=="" OR $url=="index.php"){ echo "active-profile";}?>">
+										<a href="../profile" class="<?php if($sub_url=="profile" AND $url==""){ echo "active-profile";}?>">
 												<span class="badge pull-right"><i class="fa fa-list"></i></span>
 												Belanjaan saya
 										</a>
@@ -67,7 +67,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a href="#">
+										<a href="../cart" class="<?php if($sub_url=="cart"){ echo "active-profile";}?>">
 												<span class="badge pull-right"><i class="fa fa-shopping-cart"></i></span>
 												Cart
 										</a>
@@ -77,7 +77,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a href="../wishlist" class="<?php if($sub_url=="wishlist" AND $url=="" OR $url=="index.php"){ echo "active-profile";}?>">
+										<a href="../wishlist" class="<?php if($sub_url=="wishlist"){ echo "active-profile";}?>">
 												<span class="badge pull-right"><i class="fa fa-heart"></i></span>
 												Wishlist
 										</a>

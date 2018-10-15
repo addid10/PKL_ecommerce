@@ -1698,22 +1698,10 @@ h2.title {
 }
 
 
-.cart_delete  {
-  display: block;
-  margin-right: -12px;
-  overflow: hidden;
-}
-
-
-.cart_delete a {
-  background:#F0F0E9;
-  color: #FFFFFF;
-  padding: 5px 7px;
-  font-size: 16px
-}
-
-.cart_delete a:hover {
-  background:#FE980F
+.cart-delete {
+  padding-top:20px !important;
+  padding-right:0px !important;
+  text-align:right;
 }
 
 
@@ -2566,7 +2554,6 @@ h2.title {
 }
 
 img.img-product-size {
-  border-radius:10px;
   display: block;
   object-fit: cover;
   object-position: 50% 0;
@@ -2771,6 +2758,37 @@ p.user-name{
   color:#FE980F;
 }
 
+.cart-price{
+  padding-top:30px !important;
+  font-size:16px;
+  text-align:center;
+}
+
+.cart-total{
+  padding-top:20px !important;
+  font-size:25px;
+  text-align:center;
+  font-weight: bold;
+  color:#FE980F;
+}
+
+.cart-text-total{
+  text-align: right;
+}
+
+.cart-button{
+  margin-top:0px !important;
+}
+
+tr.cart-menu-item{
+  padding:10px;
+  font-size:17px;
+  background:#FE980F;
+  color:#FFF;
+  text-align:center;
+  font-weight:300;
+  border:0px !important;
+}
 #cart-quantity .quantity[data-count]:after{
   position:absolute;
   right:10%;

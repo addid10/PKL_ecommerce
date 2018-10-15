@@ -8,3 +8,12 @@ $(document).on('submit', '#wishlist', function(){
         alert("APA LU HAPUS-HAPUS!?!");
     }
 });
+
+
+$('#add_cart').click(function() {
+    window.location.href = '../users/login.php';
+});
+
+$('#add_wishlist').click(function() {
+    window.location.href = '../users/login.php';
+});

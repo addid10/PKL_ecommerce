@@ -17,15 +17,17 @@ function get_features_items(){
                             <p>'.$data->nama_barang.'</p>         
                             <form method="GET" action="../product-detail">
                                 <input type="hidden" name="id" value="'.$data->id_barang.'">
-                                <button type="submit" href="#" class="btn btn-default"><i class="fa fa-check detail"></i> Detail Barang</button>
+                                <button type="submit" href="#" class="btn btn-default"><i class="glyphicon glyphicon-list-alt detail"></i> Detail Barang</button>
                             </form>  
                         </div>
                     </div>
                     <div class="choose">
                         <ul class="nav nav-pills nav-justified"> 
-                        <form id="cart" method="POST" action="../cart/add.php">
-                            <input type="hidden" id="add" name="id" value="'.$data->id_barang.'">
-                            <li><button type="submit" id="add-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
+                        <form id="cart" method="POST" action="../cart/index.php?action=add&id="'.$data->id_barang.'">
+                            <input type="hidden" name="quantity" value="1">
+                            <input type="hidden" name="name" value="'.$data->nama_barang.'">
+                            <input type="hidden" name="price" value="'.$data->harga.'">
+                            <li><button type="submit" name="add_to_cart" id="add-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
                         </form>
                         <form id="wishlist" method="POST" action="../wishlist/add.php">
                             <input type="hidden" id="add-id" name="id" value="'.$data->id_barang.'">

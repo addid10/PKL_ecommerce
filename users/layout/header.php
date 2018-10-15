@@ -75,9 +75,16 @@
 					</div>
 					<div class="col-sm-1 collapse navbar-collapse">
 						<div id="cart-quantity">
-							<span class="quantity fa-stack fa-2x has-badge" data-count="4">
+							<?php if(isset($_SESSION['shopping_cart'])): ?>
+							<?php $count = count($_SESSION['shopping_cart']); ?>
+							<span class="quantity fa-stack fa-2x has-badge" data-count="<?=$count?>">
 								<a href="../cart"><i class="fa fa-shopping-cart fa-stack-1x"></i></a>
 							</span>
+							<?php else: ?>
+							<span class="quantity fa-stack fa-2x has-badge" data-count="0">
+								<a href="../cart"><i class="fa fa-shopping-cart fa-stack-1x"></i></a>
+							</span>
+							<?php endif?>
 						</div>
 					</div>
 			</div>
