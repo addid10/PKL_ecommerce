@@ -2684,7 +2684,7 @@ p.user-name{
   display: inline-block; }
  
  .quantity .input-text.qty {
-  width: 150px;
+  width: 50%;
   height: 41px;
   padding: 0PX;
   text-align: center;

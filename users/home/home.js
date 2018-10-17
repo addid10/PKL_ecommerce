@@ -9,6 +9,8 @@ $(document).on('submit', '#wishlist', function(){
     }
 });
 
+$()
+
 
 $('#add_cart').click(function() {
     window.location.href = '../users/login.php';

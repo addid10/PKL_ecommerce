@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if(isset($_POST['add_to_cart'])){
+/* if(isset($_POST['add_to_cart'])){
 	if(isset($_SESSION['shopping_cart'])){
 		$item_array_id = array_column($_SESSION['shopping_cart'], 'item_id');
 		if(!in_array($_GET['id'], $item_array_id)){
@@ -17,7 +17,7 @@ if(isset($_POST['add_to_cart'])){
 			echo '<script>alert("Item telah ditambahkan")</script>';
 		}
 		else{
-			echo '<script>alert("Item sudah pernah ditambahkan)</script>';
+			echo '<script>alert("Item sudah pernah ditambahkan")</script>';
 		}
 	}
 	else{
@@ -32,7 +32,7 @@ if(isset($_POST['add_to_cart'])){
 		
 		echo '<script>alert("Item telah ditambahkan")</script>';
 	}
-}
+} */
 ?>
 <!DOCTYPE html>
 <html>
@@ -82,20 +82,19 @@ if(isset($_POST['add_to_cart'])){
 										</div>
 									</div>
 									<div class="choose">
-										<ul class="nav nav-pills nav-justified"> 
 										<?php if(isset($_SESSION['_username'])):?>
-										<form method="POST" action="index.php?action=add&id=<?= $data->id_barang ?>">
+										<form id="add_to_cart" method="POST" action="../cart/add.php">
+										<ul class="nav nav-pills nav-justified"> 
+											<input type="hidden" name="hidden_id" value="<?= $data->id_barang ?>">
 											<input type="hidden" name="hidden_quantity" value="1">
-											<input type="hidden" name="hidden_foto" value="<?= $data->foto ?>">
-											<input type="hidden" name="hidden_name" value="<?= $data->nama_barang ?>">
-											<input type="hidden" name="hidden_price" value="<?= $data->harga ?>">
-											<li><button type="submit" name="add_to_cart" id="add-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
+											<li><button type="submit" id="add-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
 										</form>
 										<form id="wishlist" method="POST" action="../wishlist/add.php">
 											<input type="hidden" id="add-id" name="id" value="<?= $data->id_barang ?>">
 											<li><button type="submit" id="add-wishlist" href="#"><i class="fa fa-plus-square"></i>Add to wishlist</button></li>
 										</form>  
 										<?php else: ?>
+										<ul class="nav nav-pills nav-justified">
 											<li><button name="add_to_cart" id="add_cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
 											<li><button type="submit" id="add_wishlist" href="#"><i class="fa fa-plus-square"></i>Add to wishlist</button></li>  
 										<?php endif ?>     
