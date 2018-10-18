@@ -1,7 +1,4 @@
 <?php session_start(); ?>
-<?php if(isset($_SESSION['_username'])): ?>
-<?php header('location: ../home'); ?>
-<?php else: ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,4 +61,3 @@
 <?php require_once('../layout/cs_javascript.php');?>
 </body>
 </html>
-<?php endif ?>

@@ -83,7 +83,11 @@ $detail = $statement->fetch();
 									<p><?php echo $detail['merk_barang']; ?></p>
 								</div>
 								<div class="col-md-6 product-padding-top">
+								<?php if(isset($_SESSION['_username'])):?>
 									<button type="submit" id="<?= $detail['id_barang']?>" class="btn btn-default cart-now add_cart"><i class="fa fa-shopping-cart"></i> Buat ke Keranjang</button>
+								<?php else: ?>
+									<button type="submit" class="btn btn-default cart-now" id="add_cart"><i class="fa fa-shopping-cart"></i> Buat ke Keranjang</button>
+								<?php endif ?>
 								</div>
 								<div class="col-md-6 product-padding-top">
 									<button type="button" class="btn btn-default order-now">Beli sekarang</button>

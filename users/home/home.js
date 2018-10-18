@@ -42,4 +42,6 @@ $(document).on('click', '.add_wishlist', function(){
     });
 });
    
-   
+$(document).on('click', '.add_to_cart', function(){
+    
+})
