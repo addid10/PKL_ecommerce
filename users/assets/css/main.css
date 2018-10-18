@@ -2557,8 +2557,7 @@ img.img-product-size {
   display: block;
   object-fit: cover;
   object-position: 50% 0;
-  width: 200px;
-  height: 200px;
+  width: 100%;
   margin:auto;
 }
 

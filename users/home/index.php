@@ -83,16 +83,10 @@ session_start();
 									</div>
 									<div class="choose">
 										<?php if(isset($_SESSION['_username'])):?>
-										<form id="add_to_cart" method="POST" action="../cart/add.php">
 										<ul class="nav nav-pills nav-justified"> 
-											<input type="hidden" name="hidden_id" value="<?= $data->id_barang ?>">
-											<input type="hidden" name="hidden_quantity" value="1">
-											<li><button type="submit" id="add-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
-										</form>
-										<form id="wishlist" method="POST" action="../wishlist/add.php">
-											<input type="hidden" id="add-id" name="id" value="<?= $data->id_barang ?>">
-											<li><button type="submit" id="add-wishlist" href="#"><i class="fa fa-plus-square"></i>Add to wishlist</button></li>
-										</form>  
+											<input type="hidden" id="hiddenQuantity" value="1">
+											<li><button type="button" id="<?= $data->id_barang ?>" class="add_cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
+											<li><button type="submit" id="<?= $data->id_barang ?>" class="add_wishlist"><i class="fa fa-heart"></i>Add to wishlist</button></li>
 										<?php else: ?>
 										<ul class="nav nav-pills nav-justified">
 											<li><button name="add_to_cart" id="add_cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
@@ -104,7 +98,14 @@ session_start();
 							</div>
 						<?php endforeach ?>
 					</div><!--features_items-->
-
+					<div class="pagination-area">
+						<ul class="pagination">
+							<li><a href="" class="active">1</a></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href=""><i class="fa fa-angle-double-right"></i></a></li>
+						</ul>
+					</div>
 					<!--recommended_items
 					
 					<div class="recommended_items">
@@ -148,7 +149,8 @@ session_start();
 
   
 <?php require_once('../layout/javascript.php');?>
-<?php require_once('../layout/cs_javascript.php');?>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="home.js"></script>
+<?php require_once('../layout/cs_javascript.php');?>
 </body>
 </html>

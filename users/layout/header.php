@@ -75,8 +75,8 @@
 					</div>
 					<div class="col-sm-1 collapse navbar-collapse">
 						<div id="cart-quantity">
-							<?php if(isset($_SESSION['shopping_cart'])): ?>
-							<?php $count = count($_SESSION['shopping_cart']); ?>
+							<?php if(isset($_SESSION['_username'])): ?>
+							<?php require_once('../layout/count-cart.php');?>
 							<span class="quantity fa-stack fa-2x has-badge" data-count="<?=$count?>">
 								<a href="../cart"><i class="fa fa-shopping-cart fa-stack-1x"></i></a>
 							</span>

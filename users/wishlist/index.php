@@ -59,12 +59,10 @@ if(isset($_SESSION['_username'])){
 										</div>
 									</div>
 									<div class="choose">
-										<form id="cart" method="POST" action="../cart/add.php">
-											<ul class="nav nav-pills nav-justified"> 
-												<input type="hidden" id="add" name="id" value="<?= $data->id_barang ?>">
-												<li><button type="submit" id="add-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
-											</ul>
-										</form>   
+										<ul class="nav nav-pills nav-justified"> 
+											<input type="hidden" id="hiddenQuantity" value="1">
+											<li><button type="button" id="<?= $data->id_barang ?>" class="add_cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
+										</ul> 
 									</div>
 								</div>
 							</div>
@@ -84,6 +82,7 @@ if(isset($_SESSION['_username'])){
 <script src="profile.js"></script>
 <?php require_once('../layout/cs_javascript.php');?>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="../home/home.js"></script>
 </body>
 </html>
 <?php else: ?>

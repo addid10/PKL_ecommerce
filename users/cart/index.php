@@ -69,7 +69,7 @@
 									</td>
 									<td class="cart-delete">
 									<form method="POST" action="delete.php">
-										<input type="hidden" name="id" value="<?= $keys['id_barang'];?>">
+										<input type="hidden" name="id" value="<?= $keys['id_cart'];?>">
 										<button class="btn btn-danger" type="submit"><i class="fa fa-times"></i></button>
 									</form>
 									</td>
@@ -79,7 +79,7 @@
 							</tbody>
 							<tfoot>
 								<tr>
-									<td colspan="6" ><button class="btn btn-primary cart-button pull-right" href="">Bayar Sekarang</button></td>
+									<td colspan="6" ><button class="btn btn-primary cart-button pull-right" href="">CHECKOUT</button></td>
 								</tr>
 							</tfoot>
 						</table>
@@ -94,9 +94,7 @@
 	</footer><!--/Footer-->
 	
 <?php require_once('../layout/javascript.php');?>
-
 <script>
-
 function numberWithCommas(number) {
 	var parts = number.toString().split(",");
 	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");

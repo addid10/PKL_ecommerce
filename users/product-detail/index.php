@@ -60,7 +60,7 @@ $detail = $statement->fetch();
 								<div class="col-md-10 product-padding-top">
 									<div class="quantity buttons_added product-quantity">
 										<input type="button" value="-" class="minus">
-										<input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text">
+										<input type="number" step="1" min="1" max="" id="hiddenQuantity" value="1" title="Qty" class="input-text qty text">
 										<input type="button" value="+" class="plus">
 									</div>
 								</div>
@@ -83,10 +83,10 @@ $detail = $statement->fetch();
 									<p><?php echo $detail['merk_barang']; ?></p>
 								</div>
 								<div class="col-md-6 product-padding-top">
-									<button type="button" class="btn btn-default order-now">Beli sekarang</button>
+									<button type="submit" id="<?= $detail['id_barang']?>" class="btn btn-default cart-now add_cart"><i class="fa fa-shopping-cart"></i> Buat ke Keranjang</button>
 								</div>
 								<div class="col-md-6 product-padding-top">
-									<button type="button" class="btn btn-default cart-now"><i class="fa fa-shopping-cart"></i> Buat ke Keranjang</button>
+									<button type="button" class="btn btn-default order-now">Beli sekarang</button>
 								</div>
 							</div><!--/product-information-->
 						</div>
@@ -153,8 +153,10 @@ $detail = $statement->fetch();
 	</footer><!--/Footer-->
 	
 
-  
+
 <?php require_once('../layout/javascript.php');?>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="../home/home.js"></script>
 <?php require_once('../layout/cs_javascript.php');?>
 </body>
 </html>

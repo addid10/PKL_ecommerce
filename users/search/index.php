@@ -57,15 +57,19 @@ if(isset($_GET['q'])){
                                         </form>        
                                     </div>
                                 </div>
-                                <div class="choose">
-                                    <form id="wishlist" method="POST" action="../wishlist/add.php">
-                                        <ul class="nav nav-pills nav-justified"> 
-                                            <input type="hidden" id="add-id" name="id" value="'.$data->id_barang.'">
-                                            <li><button type="submit" id="add-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
-                                            <li><button type="submit" id="add-wishlist" href="#"><i class="fa fa-plus-square"></i>Add to wishlist</button></li>
-                                        </ul>
-                                    </form>  
-                                </div>
+								<div class="choose">
+									<?php if(isset($_SESSION['_username'])):?>
+									<ul class="nav nav-pills nav-justified"> 
+										<input type="hidden" id="hiddenQuantity" value="1">
+										<li><button type="button" id="<?= $data->id_barang ?>" class="add_cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
+										<li><button type="submit" id="<?= $data->id_barang ?>" class="add_wishlist"><i class="fa fa-heart"></i>Add to wishlist</button></li>
+									<?php else: ?>
+									<ul class="nav nav-pills nav-justified">
+										<li><button name="add_to_cart" id="add_cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
+										<li><button type="submit" id="add_wishlist" href="#"><i class="fa fa-plus-square"></i>Add to wishlist</button></li>  
+									<?php endif ?>     
+									</ul>
+								</div>
                             </div>
                         </div>
                         <?php endforeach ?>
@@ -82,6 +86,8 @@ if(isset($_GET['q'])){
 
   
 <?php require_once('../layout/javascript.php');?>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="../home/home.js"></script>
 <?php require_once('../layout/cs_javascript.php');?>
 </body>
 </html>
