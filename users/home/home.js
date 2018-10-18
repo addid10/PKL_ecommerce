@@ -24,7 +24,7 @@ $(document).on('click', '.add_cart', function(){
         type:"POST",
         data:{id:id, quantity:quantity},
         success:function(data){
-            swal("Good job!", data, "success");
+            swal({title: "Good job", text: data, icon: "success"}).then(function(){location.reload();});
         }
     });
 });
@@ -37,7 +37,7 @@ $(document).on('click', '.add_wishlist', function(){
         type:"POST",
         data:{id:id},
         success:function(data){
-            swal("Good job!", data, "success");
+            swal({title: "Good job", text: data, icon: "success"});
         }
     });
 });
