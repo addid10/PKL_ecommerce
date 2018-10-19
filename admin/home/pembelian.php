@@ -43,10 +43,10 @@
                                                     <table class="table" id="tabelPembelian">
                                                         <thead>
                                                             <tr>
-                                                                <th>#</th>
                                                                 <th>Tanggal</th>
                                                                 <th>Total Barang</th>
                                                                 <th>Status Barang</th>
+                                                                <th>Kiriman</th>
                                                                 <th>Total Harga</th>
                                                                 <th>Status Bayar</th>
                                                                 <th>Update</th>

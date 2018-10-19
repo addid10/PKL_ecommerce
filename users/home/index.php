@@ -1,39 +1,4 @@
-<?php 
-session_start();
-/* if(isset($_POST['add_to_cart'])){
-	if(isset($_SESSION['shopping_cart'])){
-		$item_array_id = array_column($_SESSION['shopping_cart'], 'item_id');
-		if(!in_array($_GET['id'], $item_array_id)){
-			$count = count($_SESSION['shopping_cart']);
-			$item_array = array(
-				'item_id'		=> $_GET['id'],
-				'item_name'		=> $_POST['hidden_name'],
-				'item_price'	=> $_POST['hidden_price'],
-				'item_foto'		=> $_POST['hidden_foto'],
-				'item_quantity'	=> $_POST['hidden_quantity']
-			);
-			$_SESSION['shopping_cart'][$count] = $item_array;
-			
-			echo '<script>alert("Item telah ditambahkan")</script>';
-		}
-		else{
-			echo '<script>alert("Item sudah pernah ditambahkan")</script>';
-		}
-	}
-	else{
-		$item_array = array(
-			'item_id'		=> $_GET['id'],
-			'item_name'		=> $_POST['hidden_name'],
-			'item_price'	=> $_POST['hidden_price'],
-			'item_foto'		=> $_POST['hidden_foto'],
-			'item_quantity'	=> $_POST['hidden_quantity']
-		);
-		$_SESSION['shopping_cart'][0] = $item_array;
-		
-		echo '<script>alert("Item telah ditambahkan")</script>';
-	}
-} */
-?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -98,14 +63,6 @@ session_start();
 							</div>
 						<?php endforeach ?>
 					</div><!--features_items-->
-					<div class="pagination-area">
-						<ul class="pagination">
-							<li><a href="" class="active">1</a></li>
-							<li><a href="">2</a></li>
-							<li><a href="">3</a></li>
-							<li><a href=""><i class="fa fa-angle-double-right"></i></a></li>
-						</ul>
-					</div>
 					<!--recommended_items
 					
 					<div class="recommended_items">

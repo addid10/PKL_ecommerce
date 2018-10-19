@@ -36,14 +36,14 @@
 							<a href="../home"><img src="../assets/images/home/logo.png" alt="" /></a>
 						</div>
 					</div>
-					<div class="col-sm-5">
+					<div class="col-sm-4">
 						<div class="search_box collapse navbar-collapse">
 						<form id="search" action="../search/" method="GET">
 							<input type="text" name="q" placeholder="Search"/>
 						</form>
 						</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-5">
 						<div class="collapse navbar-collapse navbar-right">
 							<ul class="nav navbar-nav">
 								<li><a href="../home" class="active">Home</a></li>

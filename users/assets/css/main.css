@@ -2771,6 +2771,13 @@ p.user-name{
   color:#FE980F;
 }
 
+.cart-total-sum{
+  font-size:25px;
+  text-align:right;
+  font-weight: bold;
+  color:#FE980F;
+}
+
 .cart-text-total{
   text-align: right;
 }

@@ -79,7 +79,7 @@
 							</tbody>
 							<tfoot>
 								<tr>
-									<td colspan="6" ><button class="btn btn-primary cart-button pull-right" href="">CHECKOUT</button></td>
+									<td colspan="6" ><a href="../checkout" class="btn btn-primary cart-button pull-right" href=""><h4>Beli Sekarang</h4></a></td>
 								</tr>
 							</tfoot>
 						</table>

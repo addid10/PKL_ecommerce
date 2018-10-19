@@ -34,10 +34,10 @@ $filtered_rows = $statement->rowCount();
 foreach($result as $row)
 {
 	$sub_array = array();
-	$sub_array[] = $row["id_transaksi_pembelian"];
 	$sub_array[] = $row["tanggal_transaksi"];
 	$sub_array[] = $row["total_barang"];
 	$sub_array[] = '<label class="label label-primary">'.$row["status_barang"].'</label>';
+	$sub_array[] = '<label class="label label-primary">'.$row["status_kirim"].'</label>';
 	$sub_array[] = $row["total_harga"];
 	$sub_array[] = '<label class="label label-primary">'.$row["status_beli"].'</label>';
 	$sub_array[] = '<button type="button" name="update" id="'.$row["id_transaksi_pembelian"].'" class="btn btn-warning update"><i class="icofont icofont-check-circled"></i> Update</button>';

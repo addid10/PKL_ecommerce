@@ -149,22 +149,6 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <label class="label label-primary">Ambil Sendiri</label>
-                            </div>
-                            <div class="col-md-8">
-                                <p>Pembeli telah/akan mengambil barang</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <label class="label label-primary">Pengiriman</label>
-                            </div>
-                            <div class="col-md-8">
-                                <p>Barang telah/akan dikirim ke pembeli</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
                                 <label class="label label-primary">Dibatalkan</label>
                             </div>
                             <div class="col-md-8">
@@ -177,6 +161,30 @@
                             </div>
                             <div class="col-md-8">
                                 <p>Barang dikembalikan ke toko</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Status Pengiriman</h6>
+                        <hr>
+                    </div>
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="label label-primary">Ambil Sendiri</label>
+                            </div>
+                            <div class="col-md-8">
+                                <p>Pembeli telah/akan mengambil barang</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="label label-primary">Pengiriman</label>
+                            </div>
+                            <div class="col-md-8">
+                                <p>Barang telah/akan dikirim ke pembeli</p>
                             </div>
                         </div>
                     </div>
@@ -235,8 +243,6 @@
                         <select name="status_barang" id="status_barang" class="form-control">
                             <option value="Proses">Proses</option>
                             <option value="Selesai">Selesai</option>
-                            <option value="Ambil Sendiri">Ambil Sendiri</option>
-                            <option value="Pengiriman">Pengiriman</option>
                             <option value="Dibatalkan">Dibatalkan</option>
                         </select>
                     </div>
