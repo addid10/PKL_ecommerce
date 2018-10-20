@@ -19,7 +19,7 @@
 			<!-- Detail Profile -->
 			<div class="col-md-9">
 				<div class="left-sidebar">
-					<h2>Dynamic Tabs</h2>
+					<h2>TRANSAKSI PEMBELIAN</h2>
 					<ul class="nav nav-tabs">
 						<li class="active tab-profile"><a data-toggle="tab" href="#menu0">Belum dibayar</a></li>
 						<li class="tab-profile"><a data-toggle="tab" href="#menu1">Belum dikirimkan</a></li>
@@ -30,19 +30,215 @@
 
 					<div class="tab-content">
 						<div id="menu0" class="tab-pane fade in active">
-							<h3>Belum dibayar</h3>
+							<br />
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr class="">
+											<th>Tanggal Beli</th>
+											<th>Jumlah</th>
+											<th>Total Harga</th>
+											<th>Status Barang</th>
+											<th>Bank</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+									<?php
+										require_once('../database/db.php');
+										$id = $_SESSION['_username'];
+										$statement3 = $connection->prepare(
+											"SELECT * FROM transaksi_pembelian JOIN users on id_users=id 
+											WHERE username=:_id AND status_beli='Menunggu' AND status_barang='Proses'"
+										);
+										$statement3->bindParam('_id', $id);
+										$statement3->execute();
+										$result = $statement3->fetchAll(PDO::FETCH_OBJ);
+									?>
+									<?php foreach($result as $data):?>
+										<tr>
+											<td><?= $data->tanggal_transaksi ?></td>
+											<td><?= $data->total_barang ?></td>
+											<td><?= $data->total_harga ?></td>
+											<td><span class="label label-primary"><?= $data->status_barang ?></span></td>
+											<td><?= $data->bank ?></td>
+											<td><button type="button" id="<?= $data->id_transaksi_pembelian ?>" class="btn btn-info detail_beli">Detail Pembelian</button></td>
+											<td><button type="button" id="<?= $data->id_transaksi_pembelian ?>" class="btn btn-warning uplod_bukti">Upload Bukti Pembayaran</button></td>
+											<td><button type="button" id="<?= $data->id_transaksi_pembelian ?>" class="btn btn-danger delete_beli"><i class="fa fa-times"></i></button></td>
+										</tr>
+									<?php endforeach ?>
+									</tbody>
+								</table>
+							</div>
 						</div>
 						<div id="menu1" class="tab-pane fade">
-							<h3>Belum dikirimkan</h3>
+						<br />
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr class="">
+											<th>Tanggal Beli</th>
+											<th>Jumlah</th>
+											<th>Total Harga</th>
+											<th>Status Barang</th>
+											<th>Bank</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+									<?php
+										$id = $_SESSION['_username'];
+										$statement2 = $connection->prepare(
+											"SELECT * FROM transaksi_pembelian JOIN users on id_users=id 
+											WHERE username=:_id AND status_beli='Terbayar' AND status_kirim='Pengiriman'"
+										);
+										$statement2->bindParam('_id', $id);
+										$statement2->execute();
+										$result = $statement2->fetchAll(PDO::FETCH_OBJ);
+									?>
+									<?php foreach($result as $data):?>
+										<tr>
+											<td><?= $data->tanggal_transaksi ?></td>
+											<td><?= $data->total_barang ?></td>
+											<td><?= $data->total_harga ?></td>
+											<td><span class="label label-primary"><?= $data->status_barang ?></span></td>
+											<td><?= $data->bank ?></td>
+											<td><button type="button" class="btn btn-info detail_beli">Detail Pembelian</button></td>
+										</tr>
+									<?php endforeach ?>
+									</tbody>
+								</table>
+							</div>
 						</div>
 						<div id="menu2" class="tab-pane fade">
-							<h3>Belum diterima</h3>
+						<br />
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr class="">
+											<th>Tanggal Beli</th>
+											<th>Jumlah</th>
+											<th>Total Harga</th>
+											<th>Status Barang</th>
+											<th>Status Kirim</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+									<?php
+										$id = $_SESSION['_username'];
+										$statement2 = $connection->prepare(
+											"SELECT * FROM transaksi_pembelian JOIN users on id_users=id 
+											WHERE username=:_id AND status_beli='Terbayar' AND status_kirim='Ambil Sendiri'"
+										);
+										$statement2->bindParam('_id', $id);
+										$statement2->execute();
+										$result = $statement2->fetchAll(PDO::FETCH_OBJ);
+									?>
+									<?php foreach($result as $data):?>
+										<tr>
+											<td><?= $data->tanggal_transaksi ?></td>
+											<td><?= $data->total_barang ?></td>
+											<td><?= $data->total_harga ?></td>
+											<td><span class="label label-primary"><?= $data->status_barang ?></span></td>
+											<td><span class="label label-primary"><?= $data->status_kirim ?></span></td>
+											<td><button type="button" class="btn btn-info detail_beli">Detail Pembelian</button></td>
+										</tr>
+									<?php endforeach ?>
+									</tbody>
+								</table>
+							</div>
 						</div>
 						<div id="menu3" class="tab-pane fade">
-							<h3>Selesai</h3>
+						<br />
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr class="">
+											<th>Tanggal Beli</th>
+											<th>Jumlah</th>
+											<th>Total Harga</th>
+											<th>Status Barang</th>
+											<th>Rating</th>
+											<th>Review</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+									<?php
+										$id = $_SESSION['_username'];
+										$statement2 = $connection->prepare(
+											"SELECT * FROM transaksi_pembelian JOIN users on id_users=id 
+											WHERE username=:_id AND status_beli='Terbayar' AND status_barang='Selesai'"
+										);
+										$statement2->bindParam('_id', $id);
+										$statement2->execute();
+										$result = $statement2->fetchAll(PDO::FETCH_OBJ);
+									?>
+									<?php foreach($result as $data):?>
+										<tr>
+											<td><?= $data->tanggal_transaksi ?></td>
+											<td><?= $data->total_barang ?></td>
+											<td><?= $data->total_harga ?></td>
+											<td><span class="label label-primary"><?= $data->status_barang ?></span></td>
+											<td>
+												<div class="form-group">
+													<select class="form-control" name="rating">
+														<option>Masukkan Rating...</option>
+														<option value="5">5</option>
+														<option value="4">4</option>
+														<option value="3">3</option>
+														<option value="2">2</option>
+														<option value="2">1</option>
+												</select>
+												</div>
+											</td>
+											<td><button type="button" class="btn btn-warning detail_beli">Beri Masukan</button></td>
+											<td><button type="button" class="btn btn-info detail_beli">Detail Pembelian</button></td>
+										</tr>
+									<?php endforeach ?>
+									</tbody>
+								</table>
+							</div>
 						</div>
 						<div id="menu4" class="tab-pane fade">
-							<h3>Batal</h3>
+						<br />
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr class="">
+											<th>Tanggal Beli</th>
+											<th>Jumlah</th>
+											<th>Total Harga</th>
+											<th>Status Barang</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+									<?php
+										$id = $_SESSION['_username'];
+										$statement2 = $connection->prepare(
+											"SELECT * FROM transaksi_pembelian JOIN users on id_users=id 
+											WHERE username=:_id AND status_barang='Dibatalkan'"
+										);
+										$statement2->bindParam('_id', $id);
+										$statement2->execute();
+										$result = $statement2->fetchAll(PDO::FETCH_OBJ);
+									?>
+									<?php foreach($result as $data):?>
+										<tr>
+											<td><?= $data->tanggal_transaksi ?></td>
+											<td><?= $data->total_barang ?></td>
+											<td><?= $data->total_harga ?></td>
+											<td><span class="label label-danger"><?= $data->status_barang ?></span></td>
+											<td><button type="button" class="btn btn-info detail_beli">Detail Pembelian</button></td>
+										</tr>
+									<?php endforeach ?>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>	
