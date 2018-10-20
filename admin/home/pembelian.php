@@ -44,13 +44,14 @@
                                                         <thead>
                                                             <tr>
                                                                 <th>Tanggal</th>
-                                                                <th>Total Barang</th>
+                                                                <th>Jumlah</th>
                                                                 <th>Status Barang</th>
                                                                 <th>Kiriman</th>
-                                                                <th>Total Harga</th>
+                                                                <th>Total</th>
                                                                 <th>Status Bayar</th>
                                                                 <th>Update</th>
-                                                                <th>Detail Pembelian</th>
+                                                                <th>Detail</th>
+                                                                <th>Bukti</th>
                                                             </tr>
                                                         </thead>
                                                     </table>

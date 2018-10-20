@@ -106,4 +106,21 @@ $(document).ready(function(){
             }
         });
 	   });
+
+	   	// View Bayar
+		   $(document).on('click', '.viewBukti', function(){
+			var id = $(this).attr("id");
+			$.ajax({
+				url:"table_pembelian/detailBayar.php",
+				method:"POST",
+				data:{
+					id:id
+				},
+				success:function(data){
+					$('#buktiPembayaran').modal('show');
+					$('.modal-title').text("Bukti Pembayaran");
+					$('#bukti').html(data);
+				}
+			});
+		   });
 });
