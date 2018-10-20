@@ -12,11 +12,24 @@
         <!-- Modal body -->
         <form method="post" id="addForm" enctype="multipart/form-data">
             <div class="modal-body">
+                <div class="form-group row" id="supplier">
+                    <label class="col-sm-3 col-form-label">Supplier</label>
+                    <div class="col-sm-9">
+                        <select name="supplier" id="supplier" class="form-control">
+                            <option>Pilih Supplier..</option>
+                            <?php require_once('table_barang/functionData.php'); echo load_supplier();?>
+                            <!--
+                            <option value="1">ATK</option>
+                            <option value="2">Brankas</option>
+                            -->
+                        </select>
+                    </div>
+                </div>
                 <div class="form-group row" id="kat">
                     <label class="col-sm-3 col-form-label">Kategori</label>
                     <div class="col-sm-9">
                         <select name="kategori" id="kategori" class="form-control">
-                            <option>Pilih Kategori</option>
+                            <option>Pilih Kategori..</option>
                             <?php require_once('table_barang/functionData.php'); echo load_kategori();?>
                             <!--
                             <option value="1">ATK</option>

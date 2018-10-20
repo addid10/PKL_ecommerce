@@ -10,6 +10,7 @@ if(isset($_POST["operation"]))
     $keterangan   = $_POST['keterangan'];
     $merk_barang  = $_POST['merk_barang'];
     $id_barang    = $_POST['id_barang'];
+    $supplier     = $_POST['supplier'];
 
 	//Add
 	if($_POST["operation"] == "Add")
@@ -21,11 +22,12 @@ if(isset($_POST["operation"]))
 			$image = upload_image();
 		}
 		$statement = $connection->prepare(
-		"INSERT INTO barang (id_sub_kategori, nama_barang, harga, keterangan, foto, merk_barang) 
-        VALUES (:id_sub_kategori, :nama_barang, :harga, :keterangan, :foto, :merk_barang)
+		"INSERT INTO barang (id_sub_kategori, nama_barang, harga, keterangan, foto, merk_barang, id_supplier) 
+        VALUES (:id_sub_kategori, :nama_barang, :harga, :keterangan, :foto, :merk_barang, :supplier)
         ");
 
         $statement->bindParam("id_sub_kategori", $sub_kategori);
+        $statement->bindParam("supplier", $supplier);
         $statement->bindParam("nama_barang", $nama_barang);
         $statement->bindParam("harga", $harga);
         $statement->bindParam("keterangan", $keterangan);

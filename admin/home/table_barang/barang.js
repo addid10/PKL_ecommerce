@@ -41,10 +41,11 @@ $(document).ready(function(){
 		var merk     = $('#merk_barang').val();
 		var ket      = $('#keterangan').val();
 		var sub      = $('#sub_kategori').val();
+		var sup      = $('#supplier').val();
 		var extension= $('#foto').val().split('.').pop().toLowerCase();
 		if(extension != '')
 		{
-			if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)
+			if(jQuery.inArray(extension, ['png','jpg','jpeg']) == -1)
 			{
 				alert("Invalid Image File");
 				$('#foto').val('');
@@ -120,6 +121,7 @@ $(document).ready(function(){
 				$('#merk_barang').val(data.merk_barang);
 				$('#kat').hide();
 				$('#sub').hide();
+				$('#supplier').hide();
 				
 				$('#uploadImage').html(data.foto);
 				$('#actionButton').val("Update");

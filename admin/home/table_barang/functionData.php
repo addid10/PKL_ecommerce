@@ -47,7 +47,20 @@ function load_kategori()
 		$hasilKategori .= '<option value="'.$data->id_kategori.'">'.$data->kategori.'</option>';
 	}
 	return $hasilKategori;
-
 }
 
+function load_supplier() 
+{
+	require('db.php');
+	$hasilKategori = '';
+	$statement = $connection->prepare("SELECT * FROM supplier ORDER BY nama");
+	$statement->execute();
+	$result    = $statement->fetchAll(PDO::FETCH_OBJ);
+
+	foreach ($result as $data){
+		$hasilKategori .= '<option value="'.$data->id_supplier.'">'.$data->nama.'</option>';
+	}
+	return $hasilKategori;
+
+}
 ?>

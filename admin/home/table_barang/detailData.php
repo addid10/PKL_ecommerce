@@ -9,7 +9,7 @@ if(isset($_POST["id_barang"]))
     $tampilData = $connection->prepare(
         "SELECT * FROM barang 
          RIGHT JOIN sub_kategori USING(id_sub_kategori) 
-         RIGHT JOIN kategori USING(id_kategori) 
+         RIGHT JOIN kategori USING(id_kategori) LEFT JOIN supplier USING(id_supplier) 
          WHERE id_barang=:_idBarang");
         
         $tampilData->bindParam('_idBarang', $id_barang);
@@ -32,6 +32,10 @@ if(isset($_POST["id_barang"]))
 
         $detailHasil .= '
         <thead>
+            <tr>
+                <th>Supplier</th>
+                <th>'.$data->nama.'</th>
+            </tr>
             <tr>
                 <th>Kategori</th>
                 <th>'.$data->kategori.'</th>
