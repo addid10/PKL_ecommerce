@@ -18,10 +18,6 @@
                         <select name="supplier" id="supplier" class="form-control">
                             <option>Pilih Supplier..</option>
                             <?php require_once('table_barang/functionData.php'); echo load_supplier();?>
-                            <!--
-                            <option value="1">ATK</option>
-                            <option value="2">Brankas</option>
-                            -->
                         </select>
                     </div>
                 </div>

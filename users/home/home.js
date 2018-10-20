@@ -33,7 +33,7 @@ $(document).ready(function(){
             type:"POST",
             data:{id:id},
             success:function(data){
-                swal({title: "Good job", text: data, icon: "success"});
+                swal({title: "Good job", text: data, icon: "success"}).then(function(){location.reload();});
             }
         });
     });

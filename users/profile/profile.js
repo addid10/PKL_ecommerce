@@ -72,3 +72,102 @@ function alertDelete(){
         }
     );
 }
+
+//Dibatalkan //PHP
+$('.delete_beli').click(function(){
+    var id = $(this).attr("id");
+    swal({
+        title: "Anda yakin ingin membatalkan transaksi?",
+        icon: "error",
+        buttons: ["Belum", "Yakin"],
+        dangerMode: true,
+    })
+    .then((willDelete) => {
+        if (willDelete) {
+            $.ajax({
+                url: "transBatal.php",
+                type: "POST",
+                data: {id:id}
+            });
+            swal("Transaksi dibatalkan!", {
+                icon: "success",
+            })
+            .then(function(){
+                location.reload();
+            })
+        }
+        
+    });
+
+});
+
+
+$('.uplod_bukti').click(function(){
+    var id = $(this).attr("id");
+    $('#uploadBukti').modal('show');
+    $('#hiddenID').val(id);
+});
+
+
+//Update
+$('#addForm').submit(function(event){
+    event.preventDefault();
+    var extension = $('#foto').val().split('.').pop().toLowerCase();
+    if(extension != '')
+    {
+        if(jQuery.inArray(extension, ['png','jpg','jpeg']) == -1)
+        {
+            alert("Invalid Image File");
+            $('#foto').val('');
+            return false;
+        }
+        $.ajax({
+            url:"transBayar.php",
+            method:"POST",
+            data:new FormData(this),
+            contentType:false,
+            processData:false,
+            success:function(){
+                swal("Telah dilampirkan!", {
+                    icon: "success",
+                })
+                .then(function(){
+                    location.reload();
+                })
+            }
+        });
+    }	
+})
+    
+$('.detail_beli').click(function(){
+    var id = $(this).attr("id");
+    $.ajax({
+        url:"transDetail.php",
+        method:"POST",
+        data:{
+            id:id
+        },
+        success:function(data){
+            $('#detailModal').modal('show');
+            $('#detailData').html(data);
+        }
+    });
+});
+
+$('.review').click(function(){
+    var id = $(this).attr("id");
+    $('#reviewModal').modal('show');
+
+    $.ajax({
+        url:"review.php",
+        method:"POST",
+        data:{
+            id:id
+        },
+        success:function(data){
+            $('#detailModal').modal('show');
+            $('#detailData').html(data);
+        }
+    });
+});
+

@@ -104,8 +104,7 @@
 											<td><?= $data->total_barang ?></td>
 											<td><?= $data->total_harga ?></td>
 											<td><span class="label label-primary"><?= $data->status_barang ?></span></td>
-											<td><?= $data->bank ?></td>
-											<td><button type="button" class="btn btn-info detail_beli">Detail Pembelian</button></td>
+											<td><button type="button" id="<?= $data->id_transaksi_pembelian ?>" class="btn btn-info detail_beli">Detail Pembelian</button></td>
 										</tr>
 									<?php endforeach ?>
 									</tbody>
@@ -131,7 +130,8 @@
 										$id = $_SESSION['_username'];
 										$statement2 = $connection->prepare(
 											"SELECT * FROM transaksi_pembelian JOIN users on id_users=id 
-											WHERE username=:_id AND status_beli='Terbayar' AND status_kirim='Ambil Sendiri'"
+											WHERE username=:_id AND status_beli='Terbayar' 
+											AND status_kirim='Ambil Sendiri' AND status_barang='Proses'"
 										);
 										$statement2->bindParam('_id', $id);
 										$statement2->execute();
@@ -144,7 +144,7 @@
 											<td><?= $data->total_harga ?></td>
 											<td><span class="label label-primary"><?= $data->status_barang ?></span></td>
 											<td><span class="label label-primary"><?= $data->status_kirim ?></span></td>
-											<td><button type="button" class="btn btn-info detail_beli">Detail Pembelian</button></td>
+											<td><button type="button" id="<?= $data->id_transaksi_pembelian ?>" class="btn btn-info detail_beli">Detail Pembelian</button></td>
 										</tr>
 									<?php endforeach ?>
 									</tbody>
@@ -170,7 +170,7 @@
 									<?php
 										$id = $_SESSION['_username'];
 										$statement2 = $connection->prepare(
-											"SELECT * FROM transaksi_pembelian JOIN users on id_users=id 
+											"SELECT * FROM transaksi_pembelian JOIN users on id_users=id LEFT JOIN review USING (id_transaksi_pembelian)
 											WHERE username=:_id AND status_beli='Terbayar' AND status_barang='Selesai'"
 										);
 										$statement2->bindParam('_id', $id);
@@ -183,20 +183,9 @@
 											<td><?= $data->total_barang ?></td>
 											<td><?= $data->total_harga ?></td>
 											<td><span class="label label-primary"><?= $data->status_barang ?></span></td>
-											<td>
-												<div class="form-group">
-													<select class="form-control" name="rating">
-														<option>Masukkan Rating...</option>
-														<option value="5">5</option>
-														<option value="4">4</option>
-														<option value="3">3</option>
-														<option value="2">2</option>
-														<option value="2">1</option>
-												</select>
-												</div>
-											</td>
-											<td><button type="button" class="btn btn-warning detail_beli">Beri Masukan</button></td>
-											<td><button type="button" class="btn btn-info detail_beli">Detail Pembelian</button></td>
+											<td><?= $data->rating ?></td>
+											<td><button type="button" id="<?= $data->id_transaksi_pembelian ?>" class="btn btn-warning review">Beri Masukan</button></td>
+											<td><button type="button" id="<?= $data->id_transaksi_pembelian ?>" class="btn btn-info detail_beli">Detail Pembelian</button></td>
 										</tr>
 									<?php endforeach ?>
 									</tbody>
@@ -233,7 +222,7 @@
 											<td><?= $data->total_barang ?></td>
 											<td><?= $data->total_harga ?></td>
 											<td><span class="label label-danger"><?= $data->status_barang ?></span></td>
-											<td><button type="button" class="btn btn-info detail_beli">Detail Pembelian</button></td>
+											<td><button type="button" id="<?= $data->id_transaksi_pembelian ?>" class="btn btn-info detail_beli">Detail Pembelian</button></td>
 										</tr>
 									<?php endforeach ?>
 									</tbody>
@@ -245,7 +234,7 @@
 			</div>
 		</div>
 	</section>
-	
+	<?php require_once('../profile/modal.php'); ?>
 	<footer id="footer"><!--Footer-->
 		<?php require_once('../layout/footer.php');?>	
 	</footer><!--/Footer-->
