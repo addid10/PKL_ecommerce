@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('../database/db.php');
+require_once('../profile/view-profile.php'); 
 if(isset($_GET['q'])){
 
     $search    = $_GET['q'];
@@ -25,13 +26,13 @@ if(isset($_GET['q'])){
 		<?php require_once('../layout/header.php'); ?>
 	</header><!--/header-->
 	<div class="space-header"></div>
-	
+<!-- 	
     <section id="advertisement">
 		<div class="container">
 			<img src="../assets/images/shop/advertisement.jpg" alt="" />
 		</div>
 	</section>
-	
+	 -->
 	<section>
 		<div class="container">
 			<div class="row">

@@ -1,3 +1,26 @@
+						<h2>Profile</h2>
+						<div class="panel-group category-products">
+							<div class="panel panel-default">
+								<h4 class="panel-title">
+									<div class="col-md-4">
+										<img class="img-radius" src="../assets/images/user/<?php echo $profile->foto;?>">
+									</div>
+									<div class="col-md-8" style="padding-top:5px;">
+										<p style="color:#000">
+										<?php if($profile->nama_users==''){
+											echo "Anonymous";
+										} 
+										else{
+											echo $profile->nama_users;
+										}
+										?></p>
+										
+										<input type="hidden" id="hiddenUser" value="<?=$profile->id;?>">
+										<a href="../profile/akun.php"><i class="fa fa-pencil"></i> Edit Profile</a>
+									</div>
+								</h4>
+							</div>
+						</div>
 						<h2>Category</h2>
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 							<div class="panel panel-default">
@@ -8,7 +31,7 @@
 											HVS
 										</a>
 									</h4>
-								</div>
+								</div> 
 								<div id="sportswear" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>

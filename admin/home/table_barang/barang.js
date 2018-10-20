@@ -7,7 +7,7 @@ $(document).ready(function(){
 		$('#operation').val("Add");
 		$('#uploadImage').html('');
 	});
-	
+	 
 	var dataTable = $('#tabelBarang').DataTable({
 		ajax: "data.json",
 		"serverSide":true,

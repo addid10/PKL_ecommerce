@@ -14,6 +14,7 @@
 	<!--slide
 	<section id="slider">
 		<?php //require_once('../layout/slider.php'); ?>
+		<?php require_once('../profile/view-profile.php'); ?>
 	</section>-->
 	<?php 
 		require('../database/db.php');
@@ -94,7 +95,15 @@
 							  </a>			
 						</div>
 					</div>
-					-->
+					--><!-- 
+					<div class="pagination-area">
+						<ul class="pagination">
+							<li><a href="" class="active">1</a></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href=""><i class="fa fa-angle-double-right"></i></a></li>
+						</ul>
+					</div> -->
 				</div>
 			</div>
 		</div>
