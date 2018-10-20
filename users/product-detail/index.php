@@ -90,7 +90,7 @@ $detail = $statement->fetch();
 								<?php endif ?>
 								</div>
 								<div class="col-md-6 product-padding-top">
-									<button type="button" class="btn btn-default order-now">Beli sekarang</button>
+									<button id="<?= $detail['id_barang']?>" type="button" class="btn btn-default order-now">Beli sekarang</button>
 								</div>
 							</div><!--/product-information-->
 						</div>
@@ -160,6 +160,7 @@ $detail = $statement->fetch();
 
 <?php require_once('../layout/javascript.php');?>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="order.js"></script>
 <script src="../home/home.js"></script>
 <?php require_once('../layout/cs_javascript.php');?>
 </body>

@@ -100,7 +100,7 @@ function numberWithCommas(number) {
 	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 	return parts.join(",");
 }
-<?php for($i=1;$i<4;$i++): ?>
+<?php for($i=1;$i<20;$i++): ?>
     $('#sub<?=$i?>').click(function() {
         $('#quantity<?=$i?>').change();
     });
