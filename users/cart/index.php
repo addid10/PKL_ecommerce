@@ -121,7 +121,7 @@ function numberWithCommas(number) {
 			total = quantity * price;
 			var total_num = numberWithCommas(total);
 		}
-		$('#total<?=$i?>').html(total_num);
+		$('#total<?=$i?>').html("Rp. "+total_num);
 		$('#total_hidden<?=$i?>').val(total_num);
 
 		$.ajax({

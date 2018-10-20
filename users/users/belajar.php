@@ -1,6 +1,22 @@
 <?php
+require_once('../database/db.php');
 
 
-date_default_timezone_set('Asia/Kuala_Lumpur');
-echo date('H:i:s');
+    $tanggal       = date('y-m-d');
+    $statementBeli = $connection->prepare(
+        "INSERT INTO transaksi_pembelian(tanggal_transaksi) 
+             VALUES (:_tanggal)"
+    ); 
+
+    $statementBeli->bindParam("_tanggal",$tanggal);
+    $result = $statementBeli->execute();
+
+
+
+        $idTrans    = $connection->lastInsertId();
+
+        echo $idTrans;
+
+
+
 ?>

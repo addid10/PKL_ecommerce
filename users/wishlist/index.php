@@ -50,7 +50,7 @@ if(isset($_SESSION['_username'])){
 										</form>
 										<div class="productinfo text-center">
 											<img class="img-product-size-f2" src="../../admin/home/table_barang/upload/<?php echo $data->foto ?>" alt="" />
-											<h2 class="product-price">Rp. <?php echo $data->harga ?>,-</h2>
+											<h2 class="product-price">Rp. <?= number_format($data->harga,0,',','.') ?></h2>
 											<p><?php echo $data->nama_barang ?></p>         
 											<form method="GET" action="../product-detail">
 												<input type="hidden" name="id" value="<?php echo $data->id_barang ?>">

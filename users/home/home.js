@@ -7,11 +7,11 @@ $(document).on('submit', '#wishlist', function(){
     }
 });
 
-$('#add_cart').click(function() {
+$('.add_to_cart').click(function() {
     window.location.href = '../users/login.php';
 });
 
-$('#add_wishlist').click(function() {
+$('.add_to_wishlist').click(function() {
     window.location.href = '../users/login.php';
 });
 

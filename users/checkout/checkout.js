@@ -10,7 +10,7 @@ $(document).on('click', '.checkout', function(){
         type:"POST",
         data:{id:id, bank:bank, status_kirim:status_kirim, total_barang:total_barang, total_harga:total_harga},
         success:function(data){
-            swal({title: data, text: "Klik OK untuk ke halaman selanjutnya!", icon: "success"}).then(function(){location.reload();});
+            swal({title: data, text: "Klik OK untuk ke halaman selanjutnya!", icon: "success"}).then(function(){window.location = "../profile";});
         }
     });
 });

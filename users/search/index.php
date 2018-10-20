@@ -49,7 +49,7 @@ if(isset($_GET['q'])){
                                 <div class="single-products">
                                     <div class="productinfo text-center">
                                         <img class="img-product-size" src="../../admin/home/table_barang/upload/<?php echo $data->foto ?>" alt="" />
-                                        <h2>Rp. <?php echo $data->harga ?>,-</h2>
+                                        <h2>Rp. <?= number_format($data->harga,0,',','.') ?></h2>
                                         <p><?php echo $data->nama_barang ?></p>         
                                         <form method="GET" action="../product-detail">
                                             <input type="hidden" name="id" value="<?php echo $data->id_barang ?>">
@@ -65,8 +65,8 @@ if(isset($_GET['q'])){
 										<li><button type="submit" id="<?= $data->id_barang ?>" class="add_wishlist"><i class="fa fa-heart"></i>Add to wishlist</button></li>
 									<?php else: ?>
 									<ul class="nav nav-pills nav-justified">
-										<li><button name="add_to_cart" id="add_cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
-										<li><button type="submit" id="add_wishlist" href="#"><i class="fa fa-plus-square"></i>Add to wishlist</button></li>  
+										<li><button class="add_to_cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></li>
+										<li><button class="add_to_wishlist"><i class="fa fa-plus-square"></i>Add to wishlist</button></li>   
 									<?php endif ?>     
 									</ul>
 								</div>

@@ -68,7 +68,7 @@
                                             <p>ID: <?=$keys['id_barang']?></p>
                                         </td>
                                         <td class="cart-price">
-                                            <p><?= $keys['harga']; ?></p>
+                                            <p>Rp. <?= number_format($keys['harga'],0,',','.'); ?></p>
                                         </td>
                                         <td style="text-align:center">
                                             <div class="quantity buttons_added product-quantity">
@@ -342,12 +342,12 @@
                             $statement2->execute();
                             $result2 = $statement2->fetch();
                         ?>
+                        </form>
                         <div class="f1-buttons col-md-12">
                             <button type="button" class="btn btn-previous">Previous</button>
-                            <button type="submit" id="<?= $result2['id'] ?>" class="btn btn-submit checkout">Submit</button>
+                            <button type="button" id="<?= $result2['id'] ?>" class="btn btn-submit checkout">Submit</button>
                         </div>
                     </fieldset>
-                </form>
             </div>
         </div>
     
@@ -358,6 +358,7 @@
 
   
 <?php require_once('../layout/javascript.php');?>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="checkout.js"></script>
 <?php require_once('../layout/cs_javascript.php');?>
 <script src="../assets/js/jquery.backstretch.min.js"></script>

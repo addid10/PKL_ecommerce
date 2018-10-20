@@ -18,7 +18,7 @@
 											echo $profile->nama_users;
 										}
 										?></p>
-										<a href="../profile"><i class="fa fa-pencil"></i> Edit Profile</a>
+										<a href="../profile/akun.php"><i class="fa fa-pencil"></i> Edit Profile</a>
 									</div>
 								</h4>
 							</div>

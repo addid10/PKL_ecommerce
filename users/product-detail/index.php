@@ -52,7 +52,7 @@ $detail = $statement->fetch();
 									<div><b>124</b> Telah Terjual</div>
 								</div>
 								<div class="col-md-12 product-bg">
-									<div class="product-price">Rp <?php echo $detail['harga']; ?></div>
+									<div class="product-price">Rp. <?= number_format($detail['harga'],0,',','.'); ?></div>
 								</div>
 								<div class="col-md-2 product-padding-top">
 									<label class="product-quantity">Kuantitas</label>
@@ -86,7 +86,7 @@ $detail = $statement->fetch();
 								<?php if(isset($_SESSION['_username'])):?>
 									<button type="submit" id="<?= $detail['id_barang']?>" class="btn btn-default cart-now add_cart"><i class="fa fa-shopping-cart"></i> Buat ke Keranjang</button>
 								<?php else: ?>
-									<button type="submit" class="btn btn-default cart-now" id="add_cart"><i class="fa fa-shopping-cart"></i> Buat ke Keranjang</button>
+									<button class="add_to_cart"><i class="fa fa-shopping-cart"></i> Buat ke Keranjang</button>
 								<?php endif ?>
 								</div>
 								<div class="col-md-6 product-padding-top">

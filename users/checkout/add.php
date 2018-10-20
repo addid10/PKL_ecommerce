@@ -37,29 +37,26 @@ if(isset($_SESSION['_username'])){
 
 
     if($result){
-        $statementTampil = $connection->prepare(
-            "SELECT * FROM transaksi_pembelian WHERE waktu_transaksi=:_waktuTransaksi"
-        );
-        $statementTampil->bindParam("_waktuTransaksi",$waktu);
-
-        $tampilData = $statementTampil->fetch();
-        $idTrans    = $tampilData['id_transaksi_pembelian'];
-
+        $idTrans         = $connection->lastInsertId();
         $statementDetail = $connection->prepare(
             "INSERT INTO detail_transaksi_pembelian (id_transaksi_pembelian, id_barang, jumlah)
-            SELECT :_idTransaksi, id_barang, kuantitas FROM cart_item"
+            SELECT :_idTrans, id_barang, kuantitas FROM cart_item WHERE id_users=:_idUser"
         );
 
-        $statementDetail->bindParam("_idTransaksi", $idTrans);
+        $statementDetail->bindParam("_idTrans",$idTrans);
+        $statementDetail->bindParam("_idUser",$id_user);
         $hasil = $statementDetail->execute();
 
         if($hasil){
-            echo 'Berhasil!';
             $statementDelete = $connection->prepare(
                 "DELETE FROM cart_item WHERE id_users=:_idUser"
             );
             $statementDelete->bindParam("_idUser", $id_user);
-            $statementDelete->execute();
+            $delete = $statementDelete->execute();
+
+            if($delete){            
+                echo 'Berhasil!';
+            }
         }
 
     }
