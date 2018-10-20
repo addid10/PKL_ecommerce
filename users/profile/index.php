@@ -184,7 +184,11 @@
 											<td><?= $data->total_harga ?></td>
 											<td><span class="label label-primary"><?= $data->status_barang ?></span></td>
 											<td><?= $data->rating ?></td>
+											<?php if($data->rating=='' AND $data->review==''):?>
 											<td><button type="button" id="<?= $data->id_transaksi_pembelian ?>" class="btn btn-warning review">Beri Masukan</button></td>
+											<?php else: ?>
+											<td><?= $data->review ?></td>
+											<?php endif ?>
 											<td><button type="button" id="<?= $data->id_transaksi_pembelian ?>" class="btn btn-info detail_beli">Detail Pembelian</button></td>
 										</tr>
 									<?php endforeach ?>

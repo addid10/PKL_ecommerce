@@ -154,19 +154,30 @@ $('.detail_beli').click(function(){
     });
 });
 
-$('.review').click(function(){
-    var id = $(this).attr("id");
-    $('#reviewModal').modal('show');
 
+//Review
+$('.review').click(function(){
+    var id      = $(this).attr("id");
+    $('#reviewModal').modal('show');
+    $('#hiddenReview').val(id);
+});
+
+$('#reviewForm').submit(function(event){
+    event.preventDefault();
+    
     $.ajax({
         url:"review.php",
         method:"POST",
-        data:{
-            id:id
-        },
-        success:function(data){
-            $('#detailModal').modal('show');
-            $('#detailData').html(data);
+        data:new FormData(this),
+        contentType:false,
+        processData:false,
+        success:function(){
+            swal("Berhasil!", {
+                icon: "success",
+            })
+            .then(function(){
+                location.reload();
+            })
         }
     });
 });

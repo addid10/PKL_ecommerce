@@ -45,6 +45,7 @@
 <div class="modal" id="reviewModal">
     <div class="modal-dialog">
       <div class="modal-content">
+		<form method="post" id="reviewForm" enctype="multipart/form-data">
         <div class="modal-header">
           <h4 class="modal-title">Upload Bukti Pembayaran</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -61,13 +62,15 @@
 			    </select>
 			</div>
 			<div class="form-group">
-                <textarea id="reviewData" class="form-control" rows="8" placeholder="Berikan penilaianmu.."></textarea>
+                <textarea id="reviewData" name="review" class="form-control" rows="8" placeholder="Berikan penilaianmu.."></textarea>
 			</div>
         </div>
         <div class="modal-footer">
+		  <input type="hidden" name="id" id="hiddenReview">
           <button type="button" class="btn hor-grd btn-grd-danger" data-dismiss="modal">Close</button>
 		  <input type="submit" id="updateButton" class="btn btn-success" value="Submit">
         </div>
+        </form>
       </div>
     </div>
 </div>
