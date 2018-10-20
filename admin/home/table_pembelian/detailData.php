@@ -10,7 +10,7 @@ if(isset($_POST["id"]))
         "SELECT * FROM detail_transaksi_pembelian 
          JOIN transaksi_pembelian USING(id_transaksi_pembelian) 
          JOIN barang USING(id_barang) JOIN users on id_users=id 
-         JOIN users_profile USING(id_users)
+         JOIN users_profile USING(id)
          WHERE id_transaksi_pembelian=:_idTrans");
         
         $tampilData->bindParam('_idTrans', $id_Trans);
