@@ -1,3 +1,4 @@
+						<?php if(isset($_SESSION['_username'])): ?>
 						<h2>Profile</h2>
 						<div class="panel-group category-products">
 							<div class="panel panel-default">
@@ -21,6 +22,7 @@
 								</h4>
 							</div>
 						</div>
+						<?php endif?>
 						<h2>Category</h2>
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 							<div class="panel panel-default">
