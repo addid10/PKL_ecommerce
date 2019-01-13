@@ -1,6 +1,6 @@
 <?php session_start() ?>
-<?php if (isset($_SESSION['__username'])): ?>
+<?php if (isset($_SESSION['username_admin'])): ?>
 <?php header('location: home');?>
 <?php else: ?>
-<?php header('location: users/login/login.php'); ?>
+<?php header('location: users/login'); ?>
 <?php endif; ?>

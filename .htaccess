@@ -1,1 +1,27 @@
-ErrorDocument 404 http://localhost/PKL_ecommerce/404.html
+Options -Indexes
+ErrorDocument 404 http://localhost/lainlain.co.id/404
+ErrorDocument 403 http://localhost/lainlain.co.id/404
+
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+
+RewriteRule ^(.*)$ $1.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^product/([0-9]+) product/?id=$1 [NC]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^checkout/([0-9]+) checkout/?id=$1 [NC]
+
+
+
