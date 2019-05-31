@@ -45,7 +45,7 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h4 class="panel-title">
-				<a href="../profile" class="<?php if($sub_url=="profile" AND $url=="" ){ echo "active-profile" ;}?>">
+				<a href="../profile" class="<?php if($sub_url=="profile" && $url=="" ){ echo "active-profile" ;}?>">
 					<span class="badge pull-right"><i class="fa fa-list"></i></span>
 					Belanjaan saya
 				</a>

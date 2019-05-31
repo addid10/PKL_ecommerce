@@ -1,13 +1,60 @@
-[04-Jan-2019 09:39:18 UTC] PHP Warning:  unlink(upload/829203946.jpg): No such file or directory in /home/u5830416/public_html/lainlain.co.id/admin/home/table_barang/deleteData.php on line 14
-[04-Jan-2019 09:39:24 UTC] PHP Warning:  unlink(upload/829203946.jpg): No such file or directory in /home/u5830416/public_html/lainlain.co.id/admin/home/table_barang/deleteData.php on line 14
-[04-Jan-2019 09:42:03 UTC] PHP Warning:  unlink(upload/829203946.jpg): No such file or directory in /home/u5830416/public_html/lainlain.co.id/admin/home/table_barang/deleteData.php on line 14
-[04-Jan-2019 09:42:49 UTC] PHP Warning:  unlink(upload/829203946.jpg): No such file or directory in /home/u5830416/public_html/lainlain.co.id/admin/home/table_barang/deleteData.php on line 14
-[04-Jan-2019 09:43:30 UTC] PHP Warning:  unlink(upload/829203946.jpg): No such file or directory in /home/u5830416/public_html/lainlain.co.id/admin/home/table_barang/deleteData.php on line 14
-[04-Jan-2019 09:48:07 UTC] PHP Warning:  unlink(upload/1034607081.jpg): No such file or directory in /home/u5830416/public_html/lainlain.co.id/admin/home/table_barang/deleteData.php on line 13
-[04-Jan-2019 09:48:13 UTC] PHP Warning:  unlink(upload/1237463344.jpg): No such file or directory in /home/u5830416/public_html/lainlain.co.id/admin/home/table_barang/deleteData.php on line 13
-[04-Jan-2019 10:06:33 UTC] PHP Warning:  unlink(upload/335224161.jpg): No such file or directory in /home/u5830416/public_html/lainlain.co.id/admin/home/table_barang/deleteData.php on line 14
-[04-Jan-2019 10:07:23 UTC] PHP Warning:  unlink(upload/335224161.jpg): No such file or directory in /home/u5830416/public_html/lainlain.co.id/admin/home/table_barang/deleteData.php on line 14
-[04-Jan-2019 10:35:53 UTC] PHP Warning:  unlink(upload/1034607081.jpg): No such file or directory in /home/u5830416/public_html/lainlain.co.id/admin/home/table_barang/deleteData.php on line 14
-[04-Jan-2019 10:36:03 UTC] PHP Warning:  unlink(upload/335224161.jpg): No such file or directory in /home/u5830416/public_html/lainlain.co.id/admin/home/table_barang/deleteData.php on line 14
-[04-Jan-2019 10:36:40 UTC] PHP Warning:  unlink(upload/1237463344.jpg): No such file or directory in /home/u5830416/public_html/lainlain.co.id/admin/home/table_barang/deleteData.php on line 14
-[04-Jan-2019 10:36:51 UTC] PHP Warning:  unlink(upload/829203946.jpg): No such file or directory in /home/u5830416/public_html/lainlain.co.id/admin/home/table_barang/deleteData.php on line 14
+[22-Jan-2019 06:14:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_notification() in /home/u5830416/public_html/lainlain.co.id/admin/layout/navigation.php:49
+Stack trace:
+#0 /home/u5830416/public_html/lainlain.co.id/admin/barang/index.php(23): require_once()
+#1 {main}
+  thrown in /home/u5830416/public_html/lainlain.co.id/admin/layout/navigation.php on line 49
+[22-Jan-2019 06:26:59 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 20
+[22-Jan-2019 06:27:00 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 18
+[22-Jan-2019 07:11:19 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 3
+[22-Jan-2019 07:11:20 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 3
+[22-Jan-2019 08:35:26 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 3
+[22-Jan-2019 08:35:26 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 3
+[22-Jan-2019 08:35:26 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 3
+[22-Jan-2019 08:35:27 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 3
+[22-Jan-2019 08:35:27 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 3
+[22-Jan-2019 08:35:27 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 3
+[22-Jan-2019 08:44:09 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/detail.php on line 3
+[22-Jan-2019 08:44:13 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/ambil_tunggal.php on line 3
+[22-Jan-2019 08:44:15 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/detail.php on line 3
+[22-Jan-2019 08:50:30 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 20
+[22-Jan-2019 08:50:31 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 18
+[22-Jan-2019 10:25:32 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/operation.php on line 3
+[22-Jan-2019 10:25:33 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/ambil.php on line 3
+[22-Jan-2019 10:26:17 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 3
+[22-Jan-2019 10:26:18 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 3
+[22-Jan-2019 10:27:11 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/operation.php on line 3
+[22-Jan-2019 10:27:12 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/ambil.php on line 3
+[22-Jan-2019 10:28:22 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 20
+[22-Jan-2019 10:28:22 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 18
+[22-Jan-2019 10:34:31 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 20
+[22-Jan-2019 10:34:32 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 18
+[23-Jan-2019 03:23:52 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 20
+[23-Jan-2019 03:23:56 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 18
+[23-Jan-2019 03:24:00 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 18
+[23-Jan-2019 03:24:02 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 18
+[23-Jan-2019 03:27:28 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 20
+[23-Jan-2019 03:27:29 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 18
+[23-Jan-2019 03:36:37 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 20
+[23-Jan-2019 03:36:38 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 18
+[23-Jan-2019 03:43:26 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 20
+[23-Jan-2019 03:43:27 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 18
+[23-Jan-2019 03:45:59 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 20
+[23-Jan-2019 03:46:00 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 18
+[07-Feb-2019 07:55:24 UTC] PHP Warning:  unlink(../../assets/images/product/): Is a directory in /home/u5830416/public_html/lainlain.co.id/admin/barang/operation.php on line 57
+[15-Feb-2019 14:42:00 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/operation.php on line 3
+[15-Feb-2019 14:42:07 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/ambil.php on line 3
+[15-Feb-2019 14:42:18 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/ambil.php on line 3
+[15-Feb-2019 14:42:27 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 3
+[15-Feb-2019 14:42:28 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 3
+[15-Feb-2019 14:42:31 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 3
+[15-Feb-2019 14:42:33 UTC] PHP Notice:  Undefined index: csrf_token in /home/u5830416/public_html/lainlain.co.id/admin/barang/kategori.php on line 3
+[15-Feb-2019 14:45:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`u5830416_lainlain`.`barang`, CONSTRAINT `barang_ibfk_2` FOREIGN KEY (`id_supplier`) REFERENCES `supplier` (`id_supplier`)) in /home/u5830416/public_html/lainlain.co.id/admin/barang/operation.php:39
+Stack trace:
+#0 /home/u5830416/public_html/lainlain.co.id/admin/barang/operation.php(39): PDOStatement->execute()
+#1 {main}
+  thrown in /home/u5830416/public_html/lainlain.co.id/admin/barang/operation.php on line 39
+[15-Feb-2019 14:45:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`u5830416_lainlain`.`barang`, CONSTRAINT `barang_ibfk_2` FOREIGN KEY (`id_supplier`) REFERENCES `supplier` (`id_supplier`)) in /home/u5830416/public_html/lainlain.co.id/admin/barang/operation.php:39
+Stack trace:
+#0 /home/u5830416/public_html/lainlain.co.id/admin/barang/operation.php(39): PDOStatement->execute()
+#1 {main}
+  thrown in /home/u5830416/public_html/lainlain.co.id/admin/barang/operation.php on line 39

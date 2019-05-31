@@ -39,7 +39,7 @@
 									<a class="d-block" href="../product/<?= $data->id_barang ?>">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img class="img-product-size" src="../admin/home/table_barang/upload/<?= $data->foto ?>">
+												<img class="img-product-size" src="../assets/images/product/<?= $data->foto ?>">
 												<h4>Rp.
 													<?= number_format($data->harga, 0,',','.') ?>
 												</h4>

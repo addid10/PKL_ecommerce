@@ -39,17 +39,6 @@
                     <i class="ti-bell"></i>
                     <span class="badge bg-c-pink"></span>
                 </a>
-                <ul class="show-notification">
-                    <li>
-                        <h6>Notifications</h6>
-                        <label class="label label-danger">New</label>
-                    </li>
-                    <li>
-                        <div class="media">
-                            <?php require_once('function.php'); echo get_notification();?>
-                        </div>
-                    </li>
-                </ul>
             </li>
 
             <li class="user-profile header-notification">

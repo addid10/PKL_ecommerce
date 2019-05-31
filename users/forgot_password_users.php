@@ -7,7 +7,6 @@ if(isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_token
         require_once('../database/db.php');
         $email  = $_POST['email'];
         $token  = crypt($email, "LainLain.co.id");
-        $random = crypt($success, "Sukses! Roleplayverse");
 
         $validasi = $connection->prepare(
             "SELECT *, COUNT(email) as counts FROM users WHERE email=:email"
@@ -62,15 +61,15 @@ if(isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_token
                 $mail = new PHPMailer;
                 $mail->isSMTP();
                 $mail->SMTPDebug = 0;
-                $mail->Host = 'smtp.gmail.com';
-                $mail->Port = 587;
-                $mail->SMTPSecure = 'tls';
+                $mail->Host = 'mail.lainlain.co.id';
+                $mail->Port = 465;
+                $mail->SMTPSecure = 'ssl';
                 $mail->SMTPAuth = true;
-                $mail->Username = "csgoservicecom@gmail.com";
-                $mail->Password = "tinteen2016";
-                $mail->setFrom('fufcadays@windows.com', 'LainLain CS');
-                $mail->addAddress($email, "Pengguna");
-                $mail->Subject = 'Forgot Password';
+                $mail->Username = "info@lainlain.co.id";
+                $mail->Password = "LainLain123";
+                $mail->setFrom('info@lainlain.co.id', 'LainLain CS');
+                $mail->addAddress($email, $username);
+                $mail->Subject = 'Verifikasi Akun';
                 $mail->msgHTML($body);
                 $mail->send();
             }

@@ -1,17 +1,16 @@
 //Read
 $(document).ready(function () {
 	var dataTable = $('#tabelReview').DataTable({
-		ajax: "data.json",
 		"serverSide": true,
 		"bLengthChange": false,
 		"bFilter": true,
 		"bInfo": false,
 		"bAutoWidth": false,
 		"order": [],
-
 		"ajax": {
 			url: "ambil.php",
-			type: "POST"
+			type: "POST",
+			dataType: "json"
 		},
 		"columnDefs": [{
 			"targets": [0, 2, 3],

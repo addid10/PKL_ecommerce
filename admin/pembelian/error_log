@@ -1,0 +1,15 @@
+[22-Jan-2019 06:14:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_notification() in /home/u5830416/public_html/lainlain.co.id/admin/layout/navigation.php:49
+Stack trace:
+#0 /home/u5830416/public_html/lainlain.co.id/admin/pembelian/index.php(16): require_once()
+#1 {main}
+  thrown in /home/u5830416/public_html/lainlain.co.id/admin/layout/navigation.php on line 49
+[22-Jan-2019 06:14:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_notification() in /home/u5830416/public_html/lainlain.co.id/admin/layout/navigation.php:49
+Stack trace:
+#0 /home/u5830416/public_html/lainlain.co.id/admin/pembelian/index.php(16): require_once()
+#1 {main}
+  thrown in /home/u5830416/public_html/lainlain.co.id/admin/layout/navigation.php on line 49
+[22-Jan-2019 06:14:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_notification() in /home/u5830416/public_html/lainlain.co.id/admin/layout/navigation.php:49
+Stack trace:
+#0 /home/u5830416/public_html/lainlain.co.id/admin/pembelian/index.php(16): require_once()
+#1 {main}
+  thrown in /home/u5830416/public_html/lainlain.co.id/admin/layout/navigation.php on line 49

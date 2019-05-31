@@ -29,7 +29,6 @@ $('.btn-cart-on').click(function () {
 
 //Beli Sekarang say
 $('.btn-order-on').click(function () {
-    alert("Woe");
     let id = $(this).attr("id");
     let quantity = $('#quantity').val();
 

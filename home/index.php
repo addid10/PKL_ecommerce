@@ -8,10 +8,8 @@
 
 <body>
 	<header id="header">
-		<!--header-->
 		<?php require_once('../layout/header.php'); ?>
 	</header>
-	<!--/header-->
 	<div class="space-header"></div>
 
 	<?php require_once('index.barang.php'); ?>
@@ -25,15 +23,14 @@
 				</div>
 				<div class="col-sm-9">
 					<div class="features_items row">
-						<!--features_items-->
 						<h2 class="col-sm-12 title text-center">Features Items</h2>
 						<?php foreach ($result as $data): ?>
-						<div class="col-sm-3 col-6">
+						<div class="col-lg-3 col-md-3 col-6">
 							<div class="product-image-wrapper">
 								<a class="d-block" href="../product/<?= $data->id_barang ?>">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img class="img-product-size" src="../admin/home/table_barang/upload/<?= $data->foto ?>">
+											<img class="img-product-size" src="../assets/images/product/<?= $data->foto ?>">
 											<h4>Rp.<?= number_format($data->harga, 0,',','.') ?></h4>
 											<p><?= $data->nama_barang ?></p>
 										</div>
@@ -110,12 +107,11 @@
 			</div>
 		</div>
 	</section>
+	<div class="space-header"></div>
 
 	<footer id="footer">
-		<!--Footer-->
 		<?php require_once('../layout/footer.php');?>
 	</footer>
-	<!--/Footer-->
 
 
 

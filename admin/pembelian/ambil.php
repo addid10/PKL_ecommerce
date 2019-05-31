@@ -6,7 +6,7 @@ if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_toke
 
 	$lihatPembelian  = '';
 	$pembelian  = array();
-	$lihatPembelian .= "SELECT * FROM transaksi_pembelian WHERE status_barang IN('Proses','Selesai', 'Dibatalkan') ";
+	$lihatPembelian .= "SELECT * FROM transaksi_pembelian t JOIN users_profile ON t.id_users=id WHERE status_barang IN('Proses','Selesai', 'Dibatalkan') ";
 
 	if(isset($_POST["search"]["value"])) {
 		$lihatPembelian .= 'AND (tanggal_transaksi RLIKE :search ';
@@ -36,8 +36,8 @@ if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_toke
 
 	foreach($result as $row) {
 		$sub_array = array();
+		$sub_array[] = $row["nama_users"];
 		$sub_array[] = $row["tanggal_transaksi"];
-		$sub_array[] = $row["total_barang"];
 		$sub_array[] = '<label class="label label-primary">'.$row["status_barang"].'</label>';
 		$sub_array[] = '<label class="label label-primary">'.$row["status_kirim"].'</label>';
 		$sub_array[] = 'Rp. '.number_format($row["total_harga"],0,'.','.');

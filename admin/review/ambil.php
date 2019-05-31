@@ -40,15 +40,15 @@ if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_toke
 		if($row["rating"]==5) {
 			$sub_array[] = '<i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i>';
 		} else if($row["rating"]==4) { 
-			$sub_array[] = '<i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star"></i>';
+			$sub_array[] = '<i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i>';
 		} else if($row["rating"]==3) {
-			$sub_array[] = '<i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i>';
+			$sub_array[] = '<i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i>';
 		} else if($row["rating"]==2) {
-			$sub_array[] = '<i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i>';
+			$sub_array[] = '<i class="icofont icofont-star rating"></i><i class="icofont icofont-star rating"></i>';
 		} else if($row["rating"]==1) {
-			$sub_array[] = '<i class="icofont icofont-star rating"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i>';
+			$sub_array[] = '<i class="icofont icofont-star rating"></i>';
 		} else{
-			$sub_array[] = '<i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i><i class="icofont icofont-star"></i>';
+			$sub_array[] = '';
 		}
 		$sub_array[] = '<button type="button" name="view" 	id="'.$row["id_review"].'" class="btn btn-info view"><i class="ti-comments"></i> Detail Review</button>';
 		$data[] = $sub_array;

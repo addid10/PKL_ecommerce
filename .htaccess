@@ -1,6 +1,21 @@
-Options -Indexes
-ErrorDocument 404 http://localhost/lainlain.co.id/404
-ErrorDocument 403 http://localhost/lainlain.co.id/404
+RewriteCond %{HTTP_HOST} ^lainlain\.co.id [NC]
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.lainlain.co.id/$1 [R,L]
+
+RewriteEngine on 
+RewriteCond %{HTTP_HOST} ^lainlain\.co.id [NC]
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.lainlain.co.id/$1 [R=301,L]
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} !=""
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTPS}s ^on(s)|
+RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 
 RewriteEngine on
@@ -25,3 +40,7 @@ RewriteRule ^checkout/([0-9]+) checkout/?id=$1 [NC]
 
 
 
+
+Options -Indexes
+ErrorDocument 404 https://lainlain.co.id/404.php
+ErrorDocument 403 https://lainlain.co.id/404.php

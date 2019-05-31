@@ -25,30 +25,33 @@
 <?php endif?>
 <h2>Category</h2>
 <div class="panel-group category-products" id="accordian">
+	<?php require_once('category-list.php'); ?>
+	<?php foreach($list as $data): ?>
+	<?php $id = $data->id_kategori ?>
 	<div class="panel panel-default">
 		<div class="panel-heading pt-0">
 			<h4 class="panel-title  mb-0">
-				<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+				<a data-toggle="collapse" data-parent="#accordian" href="#kategori<?= $id ?>">
 					<span class="p-2 badge pull-right"><i class="fa fa-plus"></i></span>
-					HVS
+					<?= $data->kategori ?> 
 				</a>
 			</h4>
 		</div>
-		<div id="sportswear" class="panel-collapse collapse">
+		<div id="kategori<?= $id ?>" class="panel-collapse collapse">
 			<div class="panel-body">
 				<ul>
-					<li><a href="#">Mirage </a></li>
-					<li><a href="#">KIKY </a></li>
-					<li><a href="#">SIDU </a></li>
-					<li><a href="#">EPAPER </a></li>
-					<li><a href="#">COPY PAPER </a></li>
+				<?php
+					$subs = $connection->prepare("SELECT * FROM sub_kategori WHERE id_kategori=:id");
+					$subs->bindParam('id', $id);
+					$subs->execute();
+					$sub = $subs->fetchAll(PDO::FETCH_OBJ);
+				?>
+					<?php foreach($sub as $row): ?>
+						<li><a href="../category/?q=<?=$row->sub_kategori?>"><?= $row->sub_kategori ?></a></li>
+					<?php endforeach ?>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<div class="panel panel-default">
-		<div class="panel-heading pt-0">
-			<h4 class="panel-title"><a href="#">Buku Tulis</a></h4>
-		</div>
-	</div>
+	<?php endforeach ?>
 </div>

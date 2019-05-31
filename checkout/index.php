@@ -50,7 +50,7 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr class="cart-menu-item">
-                                    <th colspan="2">Item</th>
+                                    <th class="text-left">Item</th>
                                     <th>Harga</th>
                                     <th>Kuantitas</th>
                                     <th width="25%">Total</th>
@@ -59,8 +59,6 @@
                             <tbody>
                                 <?php foreach($result as $keys):?>
                                 <tr>
-                                    <td><a><img width="80px" src="../../admin/home/table_barang/upload/<?= $keys['foto'] ?>"
-                                                alt=""></a></td>
                                     <td class="cart-description">
                                         <?= $keys['nama_barang']; ?>
                                     </td>
@@ -81,7 +79,7 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <td colspan="4" class="text-right pr-5">Total</td>
+                                    <td colspan="3" class="text-right pr-5">Total Keseluruhan</td>
                                     <td class="cart-total">Rp.
                                         <?= number_format($total,2,',','.') ?>
                                     </td>
@@ -200,7 +198,7 @@
                         <label class="col-md-3">Jumlah Pembayaran</label>
                         <label class="col-1">Rp.</label>
                         <div class="col-md-6">
-                            <input type="text" id="total" class="form-control" value="">
+                            <input type="text" id="total" class="form-control" value="<?= $totalBayar ?>">
                         </div>
                         <div class="col-md-2">
                             <button type="button" class="btn btn-copy copy-total">Copy</button>

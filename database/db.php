@@ -1,9 +1,9 @@
 <?php
 try {
-    $username = 'root';
-    $password = '';
+    $username = 'u5830416_addid';
+    $password = 'IotR[cnHkS&a';
     // first connect to database with the PDO object. 
-    $connection = new \PDO('mysql:host=localhost;dbname=pkl_ecommerce;', $username, $password, [
+    $connection = new \PDO('mysql:host=localhost;dbname=u5830416_lainlain;', $username, $password, [
       PDO::ATTR_EMULATE_PREPARES => false, 
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]); 

@@ -54,12 +54,16 @@ if(isset($_POST['csrf_token']) && $_POST['csrf_token']===$_SESSION['csrf_token']
     
                 if(!empty($hasil)){
                     $delete = $connection->prepare(
-                        "DELETE FROM cart_item WHERE id_cart=:id; 
-                        DELETE FROM cart WHERE id_cart=:ids"
+                        "DELETE FROM cart_item WHERE id_cart=:id"
                     );
                     $delete->bindParam("id", $id);
-                    $delete->bindParam("ids", $id);
                     $delete->execute();
+                    
+                    $deleteCart = $connection->prepare(
+                        "DELETE FROM cart WHERE id_cart=:id"
+                    );
+                    $deleteCart->bindParam("id", $id);
+                    $deleteCart->execute();
                 }
     
             }

@@ -50,6 +50,7 @@
 							<p>Jl. Hasanudin HM No.55</p>
 							<p>Banjarmasin, Kal - Sel</p>
 							<p>Email: info@lainlain.co.id</p>
+							<p>Phone: 082252911973</p>
 	    				</address>
 	    				<div class="social-networks">
 	    					<h2 class="title text-center">Social Networking</h2>

@@ -24,8 +24,8 @@
 							<table class="table table-striped">
 								<thead>
 									<tr>
-										<th width="25%" colspan="2">Item</th>
-										<th width="25%">Harga</th>
+										<th width="35%" colspan="2">Item</th>
+										<th width="20%">Harga</th>
 										<th width="20%">Kuantitas</th>
 										<th width="25%">Total</th>
 										<th></th>
@@ -35,7 +35,7 @@
 								<tbody>
 									<?php foreach($result as $data):?>
 									<tr>
-										<td><img width="80px" src="../admin/home/table_barang/upload/<?= $data['foto'] ?>"></td>
+										<td><img width="80px" src="../assets/images/product/<?= $data['foto'] ?>"></td>
 										<td><a href="../product/<?= $data['id_barang'] ?>"><?= $data['nama_barang']; ?></a></td>
 										<td>Rp. <?= number_format($data['harga'],0,',','.'); ?></td>
 										<td>

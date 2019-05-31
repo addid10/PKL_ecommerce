@@ -36,7 +36,7 @@ $(document).ready(function () {
         let pass = $('#password').val();
         let email = $('#email').val();
         let acc = $('#checkbox').is(':checked');
-        if (username == '' && pass == '' && email == '' && acc == '') {
+        if (username === '' && pass === '' && email === '' && acc === '') {
             alert("Isi Kawan ae.");
         } else {
             $.ajax({
@@ -44,9 +44,10 @@ $(document).ready(function () {
                 method: 'POST',
                 data: new FormData(this),
                 contentType: false,
+                dataType: "json",
                 processData: false,
                 success: function (data) {
-                    window.location.href = data;
+                    window.location.href = data.status;
                 }
             });
         }
@@ -63,20 +64,7 @@ $('#username').keyup(function () {
     } else if (username.length > maxLength) {
         $("#status").text("Terlalu panjang");
     } else {
-        if (username != '') {
-            $.ajax({
-                url: "check_users.php",
-                type: "POST",
-                data: {
-                    username: username
-                },
-                success: function (data) {
-                    $('#status').html(data);
-                }
-            });
-        } else {
-            $('#status').html('');
-        }
+        $('#status').html('');
     }
 });
 

@@ -1,0 +1,27 @@
+[07-May-2019 18:02:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php:14
+Stack trace:
+#0 /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php(14): PDOStatement->bindParam('id', '1')
+#1 {main}
+  thrown in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 14
+[07-May-2019 18:02:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php:14
+Stack trace:
+#0 /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php(14): PDOStatement->bindParam('id', '1')
+#1 {main}
+  thrown in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 14
+[07-May-2019 18:02:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php:14
+Stack trace:
+#0 /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php(14): PDOStatement->bindParam('id', '1')
+#1 {main}
+  thrown in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 14
+[07-May-2019 18:07:34 UTC] PHP Notice:  Undefined variable: detailData in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 18
+[07-May-2019 18:07:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 18
+[07-May-2019 18:07:34 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 48
+[07-May-2019 18:07:59 UTC] PHP Notice:  Undefined variable: detailData in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 18
+[07-May-2019 18:07:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 18
+[07-May-2019 18:07:59 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 48
+[07-May-2019 18:09:50 UTC] PHP Notice:  Undefined variable: detailData in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 17
+[07-May-2019 18:09:50 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 17
+[07-May-2019 18:09:50 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 31
+[07-May-2019 18:09:59 UTC] PHP Notice:  Undefined variable: detailData in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 17
+[07-May-2019 18:09:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 17
+[07-May-2019 18:09:59 UTC] PHP Notice:  Array to string conversion in /home/u5830416/public_html/lainlain.co.id/admin/review/detail.php on line 31

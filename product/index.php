@@ -1,13 +1,15 @@
-<?php session_start(); ?>
+<?php require_once('../layout/token.php'); ?>
 <?php if(isset($_GET['id'])): ?>
 <?php require_once('index.detail.php'); ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title><?= $detail['nama_barang'] ?> - LainLain</title>
-	<?php require_once('../layout/head.php');?>
+	<title>
+		<?= $detail['nama_barang'] ?> - LainLain</title>
+		<?php require_once('../layout/head.php');?>
 </head>
+
 <body>
 	<header id="header">
 		<?php require_once('../layout/header.php'); ?>
@@ -21,7 +23,7 @@
 					<div class="product-details row">
 						<div class="col-md-4">
 							<div class="view-product">
-								<img id="zoom" src="../../admin/home/table_barang/upload/<?= $detail['foto']; ?>" data-zoom-image="../../admin/home/table_barang/upload/<?php echo $detail['foto']; ?>" />
+								<a href="#" class="d-block" style="cursor: zoom-in;" data-toggle="modal" data-target="#zoom-modal"><img src="../assets/images/product/<?= $detail['foto']; ?>"></a>
 							</div>
 						</div>
 						<div class="col-md-8">
@@ -47,7 +49,9 @@
 									</div>
 								</div>
 								<div class="col-md-12 product-bg">
-									<div class="product-price">Rp. <?= number_format($detail['harga'],0,',','.'); ?></div>
+									<div class="product-price">Rp.
+										<?= number_format($detail['harga'],0,',','.'); ?>
+									</div>
 								</div>
 								<div class="col-md-2 product-padding-top">
 									<label class="product-quantity">Kuantitas</label>
@@ -82,7 +86,7 @@
 								<?php if(isset($_SESSION['username_member'])):?>
 								<div class="col-md-6 product-padding-top">
 									<button id="<?= $detail['id_barang']?>" type="button" class="btn btn-cart btn-cart-on">
-									<i class="fa fa-shopping-cart"></i> Buat ke Keranjang</button>
+										<i class="fa fa-shopping-cart"></i> Buat ke Keranjang</button>
 								</div>
 								<div class="col-md-6 product-padding-top">
 									<button id="<?= $detail['id_barang']?>" type="button" class="btn btn-order btn-order-on">Beli sekarang</button>
@@ -110,7 +114,16 @@
 			</div>
 	</section>
 	<div class="space-header"></div>
-
+	<!-- Modal -->
+	<div class="modal" tabindex="-1" role="dialog" id="zoom-modal">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-body p-0">
+					<img class="w-100" src="../assets/images/product/<?= $detail['foto']; ?>">
+				</div>
+			</div>
+		</div>
+	</div>
 	<footer id="footer">
 		<?php require_once('../layout/footer.php');?>
 	</footer>

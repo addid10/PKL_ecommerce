@@ -1,9 +1,9 @@
 ﻿/*************************
 *******Typography******
 **************************/
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
-@import url(http://fonts.googleapis.com/css?family=Abel);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
+@import url(https://fonts.googleapis.com/css?family=Abel);
 @import url('https://fonts.googleapis.com/css?family=Karla');
 
 
@@ -920,7 +920,11 @@ h2.title {
   margin: 0px;
   font-size: 16px;
   font-weight: 400;
-  color: #696763;
+  color: #555453;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  height: 30px;
 }
 
 .productinfo img {

@@ -1,0 +1,124 @@
+section.bg-primary {
+    background: rgba(255, 90, 0, 0.8) !important;
+}
+
+.btn {}
+
+.btn:focus {
+    outline: none;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.btn-primary,
+.btn-primary:hover {
+    border-color: transparent;
+    background: -moz-linear-gradient(180deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%);
+    /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 90, 0, 1)), color-stop(100%, rgba(1255, 54, 0, 1)));
+    /* safari4+,chrome */
+    background: -webkit-linear-gradient(180deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%);
+    /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(180deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%);
+    /* opera 11.10+ */
+    background: -ms-linear-gradient(180deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%);
+    /* ie10+ */
+    background: linear-gradient(270deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%);
+    /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5a00', endColorstr='#ff3600', GradientType=1);
+    /* ie6-9 */
+    color: #fff !important;
+    border: 2px solid rgba(255, 54, 0, 1) !important;
+    border-radius: 24px !important;
+    font-weight: 600;
+    color: #c5a3a3;
+    outline: none;
+}
+
+.pcoded .pcoded-header[header-theme="theme5"] {
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 90, 0, 1)), color-stop(100%, rgba(1255, 54, 0, 1))) !important;
+    /* safari4+,chrome */
+    background: linear-gradient(270deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%) !important;
+    /* w3c */
+}
+
+.page-item.active .page-link {
+    background-color: rgba(255, 54, 0, 0.9) !important;
+    border-color: rgba(255, 54, 0, 1) !important;
+}
+
+.pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item>li.active-navbar>a.home:hover,
+.pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item>li.active-navbar>a.home {
+    background: linear-gradient(to right, #E62E00, rgba(255, 90, 0, 1)) !important;
+    background: -webkit-gradient(linear, left top, right top, from(#E62E00), to(rgba(255, 90, 0, 1))) !important;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item>li.active-navbar>a.home:before {
+    border-left-color: #E62E00 !important;
+}
+
+.pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item>li:hover.active-navbar>a.home i,
+.pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item>li.active-navbar>a.home i {
+    color: #fff !important;
+}
+
+.pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item li:hover>a.home i,
+.pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item li:hover>a.home {
+    color: #E62E00 !important;
+}
+
+.nav-tabs .slide {
+    background: -moz-linear-gradient(180deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%) !important;
+    /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgb(241, 152, 105)), color-stop(100%, rgba(1255, 54, 0, 1))) !important;
+    /* safari4+,chrome */
+    background: -webkit-linear-gradient(180deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%) !important;
+    /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(180deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%) !important;
+    /* opera 11.10+ */
+    background: -ms-linear-gradient(180deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%) !important;
+    /* ie10+ */
+    background: linear-gradient(270deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%) !important;
+    /* w3c */
+}
+
+.md-tabs .nav-item.open .nav-link,
+.md-tabs .nav-item.open .nav-link:focus,
+.md-tabs .nav-item.open .nav-link:hover,
+.md-tabs .nav-link.active,
+.md-tabs .nav-link.active:focus,
+.md-tabs .nav-link.active:hover {
+    color: #E62E00 !important;
+}
+
+.swal2-container {
+    z-index: 99999999999 !important;
+}
+
+.table-committee td {
+    vertical-align: baseline;
+}
+
+.pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item>li.active>a {
+    background: -moz-linear-gradient(180deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%) !important;
+    /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgb(241, 152, 105)), color-stop(100%, rgba(1255, 54, 0, 1))) !important;
+    /* safari4+,chrome */
+    background: -webkit-linear-gradient(180deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%) !important;
+    /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(180deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%) !important;
+    /* opera 11.10+ */
+    background: -ms-linear-gradient(180deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%) !important;
+    /* ie10+ */
+    background: linear-gradient(270deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%) !important;
+    /* w3c */
+    color: #fff !important;
+}
+
+.pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item>li.active>a:before {
+    border-left-color: rgb(170, 37, 0);
+}

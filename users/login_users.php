@@ -49,7 +49,7 @@ if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_toke
             echo 'login?status=Username atau password salah!';
             exit;
           }
-          echo 'login?status=Akun kamu telah diblokir!';
+          echo 'login?status=Akun kamu belum diverifikasi!';
           exit;
         }
         echo 'login?status=Username atau password salah!';

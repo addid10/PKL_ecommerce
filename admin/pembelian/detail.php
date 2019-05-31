@@ -23,7 +23,6 @@ if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_toke
             <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>Pembeli</th>
                     <th>Barang</th>
                     <th>Merk</th>
                     <th>Harga</th>
@@ -32,12 +31,10 @@ if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_toke
                 </tr>
             </thead>';
             
-        foreach ($detailData as $data)
-        {
+        foreach ($detailData as $data) {
             $result .= '
             <tbody>
                 <tr>
-                    <td>'.$data->nama_users.'</th>
                     <td>'.$data->nama_barang.'</th>
                     <td>'.$data->merk_barang.'</th>
                     <td>'.$data->harga.'</th>
@@ -47,8 +44,9 @@ if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_toke
             </tbody>
             ';
         }
-        $result   .= '
-        </table></div>';
+        $result   .= '</table></div>';
+        $result   .= '<br><h6><b>Alamat</b>: <br>';
+        $result   .= $data->alamat.', '.$data->kode_pos.'</h6>';
 
         echo $result;   
     }

@@ -36,7 +36,7 @@ if(isset($_SESSION['user_id'])){
 				<div class="col-md-9">
 					<h2 class="title text-center">WISHLIST</h2>
 					<div class="left-sidebar">
-						<div class="features_items">
+						<div class="features_items row">
 							<?php foreach($row as $data): ?>
 							<div class="col-sm-3">
 								<a class="d-block" href="../product/<?= $data->id_barang ?>">
@@ -46,7 +46,7 @@ if(isset($_SESSION['user_id'])){
 												<button id="<?= $data->id_wishlist ?>" class="btn btn-danger delete-wishlist" type="button"><i class="fa fa-trash-o"></i></button>
 											</div>
 											<div class="productinfo text-center">
-												<img class="img-product-size-f2" src="../admin/home/table_barang/upload/<?php echo $data->foto ?>" alt="" />
+												<img class="img-product-size-f2" src="../assets/images/product/<?php echo $data->foto ?>" alt="" />
 												<h2 class="product-price mb-1">Rp.<?= number_format($data->harga,0,',','.') ?></h2>
 												<p class="mt-0"><?php echo $data->nama_barang ?></p>
 											</div>

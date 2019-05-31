@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<?php require_once('../layout/token.php'); ?>
 <?php if (isset($_SESSION['username_admin'])): ?>
 <?php header('location: ../home');?>
 <?php else: ?>

@@ -13,7 +13,7 @@
                         <div class="col-sm-9">
                             <select name="supplier" id="supplier" class="form-control">
                                 <option>Pilih Supplier..</option>
-                                <?php require_once('../barang/functionData.php'); echo load_supplier();?>
+                                <?php require_once('../barang/function.php'); echo load_supplier();?>
                             </select>
                         </div>
                     </div>
@@ -22,7 +22,7 @@
                         <div class="col-sm-9">
                             <select name="kategori" id="kategori" class="form-control">
                                 <option>Pilih Kategori..</option>
-                                <?php require_once('../barang/functionData.php'); echo load_kategori();?>
+                                <?php require_once('../barang/function.php'); echo load_kategori();?>
                             </select>
                         </div>
                     </div>
@@ -31,15 +31,6 @@
                         <div class="col-sm-9">
                             <select name="sub_kategori" id="sub_kategori" class="form-control">
                                 <option>Pilih Sub Kategori</option>
-                                <!--
-                            <option value="1">Kertas</option>
-                            <option value="2">Pulpen</option>
-                            <option value="3">Pensil</option>
-                            <option value="4">Spidol</option>
-                            <option value="5">Brankas Kecil</option>
-                            <option value="6">Brankas Sedang</option>
-                            <option value="7">Brankas Besar</option>
-                            -->
                             </select>
                         </div>
                     </div>
@@ -92,7 +83,7 @@
 
 <!--Modal View-->
 <div class="modal" id="detailModal">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title"></h4>
@@ -168,7 +159,7 @@
                                 <label class="label label-primary">Ambil Sendiri</label>
                             </div>
                             <div class="col-md-8">
-                                <p>Pembeli telah/akan mengambil barang</p>
+                                <p>Pembeli akan mengambil barang</p>
                             </div>
                         </div>
                         <div class="row">
@@ -176,7 +167,7 @@
                                 <label class="label label-primary">Pengiriman</label>
                             </div>
                             <div class="col-md-8">
-                                <p>Barang telah/akan dikirim ke pembeli</p>
+                                <p>Barang akan dikirim ke pembeli</p>
                             </div>
                         </div>
                     </div>

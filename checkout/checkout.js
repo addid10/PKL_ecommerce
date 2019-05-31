@@ -42,36 +42,47 @@ $('#bank-list').change(function () {
 $('.custom-control-input').change(function () {
     let id = $('.btn-next').attr("id");
     let status = $(this).attr("id");
+    let biaya = parseInt($('#total-bayar').val(), 10);
+    let antar = 0;
+    let total;
 
     if (status == "pengiriman") {
-        var antar = 20000;
-        let biaya = parseInt($('#total-bayar').val(), 10);
-        let total = biaya + antar;
+        antar = 20000;
+        total = biaya + antar;
         $('#biaya-pengiriman').val(20000);
         $('#total-bayar').val(total);
         $('#total').val(total);
 
+        $.ajax({
+            url: "biaya_kirim.php",
+            type: "POST",
+            data: {
+                status: status,
+                id: id
+            },
+            success: function (data) {
+                console.log(data)
+            }
+        });
     } else {
-        var antar = 0;
-        let antarNew = -20000;
-        let biaya = parseInt($('#total-bayar').val(), 10);
-        let total = biaya + antarNew;
+        antar = -20000;
+        total = biaya + antar;
         $('#biaya-pengiriman').val(0);
         $('#total-bayar').val(total);
         $('#total').val(total);
+        
+        $.ajax({
+            url: "biaya_kirim.php",
+            type: "POST",
+            data: {
+                status: status,
+                id: id
+            },
+            success: function (data) {
+                console.log(data)
+            }
+        });
     }
-
-    $.ajax({
-        url: "biaya_kirim.php",
-        type: "POST",
-        data: {
-            antar: antar,
-            id: id
-        },
-        success: function (data) {
-            console.log(data)
-        }
-    });
 });
 
 $('.copy-total').click(function () {
